@@ -1,0 +1,23 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\n  \"ok\": false,\n  \"status\": \"rejected\",\n  \"title\": null,\n  \"url\": \"https://example.com/not-news\",\n  \"published_at\": null,\n  \"published_at_local\": null,\n  \"content\": null,\n  \"source\": null,\n  \"fetched_at\": \"2026-11-17T14:11:02+00:00\",\n  \"data_status\": \"rejected_before_network\",\n  \"error_code\": \"URL_NOT_ALLOWED\",\n  \"error\": \"URL 不属于任何已注册站点，或不符合其文章链接规则，已拒绝\"\n}"
+    }
+  ],
+  "structuredContent": {
+    "ok": false,
+    "status": "rejected",
+    "title": null,
+    "url": "https://example.com/not-news",
+    "published_at": null,
+    "published_at_local": null,
+    "content": null,
+    "source": null,
+    "fetched_at": "2026-11-17T14:11:02+00:00",
+    "data_status": "rejected_before_network",
+    "error_code": "URL_NOT_ALLOWED",
+    "error": "URL 不属于任何已注册站点，或不符合其文章链接规则，已拒绝"
+  },
+  "isError": false
+}

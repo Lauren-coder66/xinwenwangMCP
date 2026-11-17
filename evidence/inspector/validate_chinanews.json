@@ -1,0 +1,140 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\n  \"site_id\": \"chinanews\",\n  \"validated_at\": \"2026-11-17T13:58:03+00:00\",\n  \"ok\": true,\n  \"valid_channels\": 1,\n  \"total_channels_checked\": 1,\n  \"channels\": [\n    {\n      \"channel_id\": \"latest\",\n      \"name\": \"滚动新闻\",\n      \"url\": \"https://www.chinanews.com.cn/scroll-news/news1.html\",\n      \"ok\": true,\n      \"checks\": [\n        {\n          \"name\": \"discovery\",\n          \"ok\": true,\n          \"detail\": \"发现 9 篇文章链接\",\n          \"evidence\": {\n            \"attempted_sources\": [\n              {\n                \"type\": \"html\",\n                \"ok\": true,\n                \"returned\": 9,\n                \"diagnostics\": {\n                  \"url\": \"https://www.chinanews.com.cn/scroll-news/news1.html\",\n                  \"anchors\": 494,\n                  \"matched_article_links\": 9,\n                  \"returned\": 9,\n                  \"pattern\": \"^/[a-z]{2,10}/20\\\\d{2}/\\\\d{2}-\\\\d{2}/\\\\d+\\\\.shtml$\"\n                }\n              }\n            ],\n            \"url\": \"https://www.chinanews.com.cn/scroll-news/news1.html\",\n            \"anchors\": 494,\n            \"matched_article_links\": 9,\n            \"returned\": 9,\n            \"pattern\": \"^/[a-z]{2,10}/20\\\\d{2}/\\\\d{2}-\\\\d{2}/\\\\d+\\\\.shtml$\"\n          }\n        },\n        {\n          \"name\": \"article_parse\",\n          \"ok\": true,\n          \"detail\": \"3/3 个样本正文提取成功\",\n          \"evidence\": {\n            \"samples\": [\n              {\n                \"url\": \"https://www.chinanews.com.cn/dwq/2026/11-17/10733767.shtml\",\n                \"http_status\": 200,\n                \"fetch_error\": null,\n                \"title\": \"外交部驻港公署举办中国共产党二十届五中全会专题宣介会\",\n                \"published_at\": \"2026-11-17T13:51:00+00:00\",\n                \"published_at_local\": \"2026-11-17T21:51:00+08:00\",\n                \"content_chars\": 358,\n                \"content_preview\": \"中新网 香港11月17日电 中国外交部驻香港特别行政区特派员公署(简称“外交部驻港公署”)16日为外国驻港领团举办中国共产党第二十届中央委员会第五次全体会议专题宣介会。外交部驻港公署特派员崔建春作宣讲。来自48家外国驻港总领馆的总领事和领事官员出席。\\n崔建春全面介绍了《中共中央关于持之以恒推进全面从严治党若干重大问题的\",\n                \"extraction_status\": \"ok\",\n                \"extraction_error\": null\n              },\n              {\n                \"url\": \"https://www.chinanews.com.cn/sh/2026/11-17/10733771.shtml\",\n                \"http_status\": 200,\n                \"fetch_error\": null,\n                \"title\": \"云南侦办首例替来他明电子烟案\",\n                \"published_at\": \"2026-11-17T13:51:00+00:00\",\n                \"published_at_local\": \"2026-11-17T21:51:00+08:00\",\n                \"content_chars\": 1011,\n                \"content_preview\": \"中新网 昆明11月17日电(邹聪 褚晗)近日，云南省昆明市盘龙区烟草专卖局联合公安机关，依法侦办云南首例含替来他明“上头电子烟”案。\\n该案件侦办过程中，跨越贵州六盘水、江苏南京、无锡等多地，探索形成“先定物、再定罪、后定人”的处置流程，以专卖监管的专业支撑和跨警种协作担当，为同类案件办理提供参考。\\n2026年4月，昆明\",\n                \"extraction_status\": \"ok\",\n                \"extraction_error\": null\n              },\n              {\n                \"url\": \"https://www.chinanews.com.cn/gn/2026/11-17/10733770.shtml\",\n                \"http_status\": 200,\n                \"fetch_error\": null,\n                \"title\": \"（长征胜利90周年）广西桂林老兵永安关下重走长征路\",\n                \"published_at\": \"2026-11-17T13:47:00+00:00\",\n                \"published_at_local\": \"2026-11-17T21:47:00+08:00\",\n                \"content_chars\": 679,\n                \"content_preview\": \"中新网 桂林11月17日电(杨宗盛)11月17日，广西桂林市“赓续长征精神·永葆军人本色”纪念红军长征胜利90周年暨军休系统第十届军休文化周在灌阳县文市镇永安关景区驿站启动。\\n桂林市退役军人事务局党员和干部职工以及军休干部等代表参加活动。广西壮族自治区退役军人事务厅党组成员、副厅长徐文伟宣布活动开幕，桂林市退役军人事务\",\n                \"extraction_status\": \"ok\",\n                \"extraction_error\": null\n              }\n            ]\n          }\n        }\n      ],\n      \"samples\": [\n        {\n          \"url\": \"https://www.chinanews.com.cn/dwq/2026/11-17/10733767.shtml\",\n          \"http_status\": 200,\n          \"fetch_error\": null,\n          \"title\": \"外交部驻港公署举办中国共产党二十届五中全会专题宣介会\",\n          \"published_at\": \"2026-11-17T13:51:00+00:00\",\n          \"published_at_local\": \"2026-11-17T21:51:00+08:00\",\n          \"content_chars\": 358,\n          \"content_preview\": \"中新网 香港11月17日电 中国外交部驻香港特别行政区特派员公署(简称“外交部驻港公署”)16日为外国驻港领团举办中国共产党第二十届中央委员会第五次全体会议专题宣介会。外交部驻港公署特派员崔建春作宣讲。来自48家外国驻港总领馆的总领事和领事官员出席。\\n崔建春全面介绍了《中共中央关于持之以恒推进全面从严治党若干重大问题的\",\n          \"extraction_status\": \"ok\",\n          \"extraction_error\": null\n        },\n        {\n          \"url\": \"https://www.chinanews.com.cn/sh/2026/11-17/10733771.shtml\",\n          \"http_status\": 200,\n          \"fetch_error\": null,\n          \"title\": \"云南侦办首例替来他明电子烟案\",\n          \"published_at\": \"2026-11-17T13:51:00+00:00\",\n          \"published_at_local\": \"2026-11-17T21:51:00+08:00\",\n          \"content_chars\": 1011,\n          \"content_preview\": \"中新网 昆明11月17日电(邹聪 褚晗)近日，云南省昆明市盘龙区烟草专卖局联合公安机关，依法侦办云南首例含替来他明“上头电子烟”案。\\n该案件侦办过程中，跨越贵州六盘水、江苏南京、无锡等多地，探索形成“先定物、再定罪、后定人”的处置流程，以专卖监管的专业支撑和跨警种协作担当，为同类案件办理提供参考。\\n2026年4月，昆明\",\n          \"extraction_status\": \"ok\",\n          \"extraction_error\": null\n        },\n        {\n          \"url\": \"https://www.chinanews.com.cn/gn/2026/11-17/10733770.shtml\",\n          \"http_status\": 200,\n          \"fetch_error\": null,\n          \"title\": \"（长征胜利90周年）广西桂林老兵永安关下重走长征路\",\n          \"published_at\": \"2026-11-17T13:47:00+00:00\",\n          \"published_at_local\": \"2026-11-17T21:47:00+08:00\",\n          \"content_chars\": 679,\n          \"content_preview\": \"中新网 桂林11月17日电(杨宗盛)11月17日，广西桂林市“赓续长征精神·永葆军人本色”纪念红军长征胜利90周年暨军休系统第十届军休文化周在灌阳县文市镇永安关景区驿站启动。\\n桂林市退役军人事务局党员和干部职工以及军休干部等代表参加活动。广西壮族自治区退役军人事务厅党组成员、副厅长徐文伟宣布活动开幕，桂林市退役军人事务\",\n          \"extraction_status\": \"ok\",\n          \"extraction_error\": null\n        }\n      ],\n      \"errors\": []\n    }\n  ],\n  \"errors\": [],\n  \"status\": \"valid\",\n  \"validated_only\": true,\n  \"note\": \"验证会真实访问栏目页和文章页；只有至少一个频道有可解析正文的样本，该频道才会被 list_channels 返回。\"\n}"
+    }
+  ],
+  "structuredContent": {
+    "site_id": "chinanews",
+    "validated_at": "2026-11-17T13:58:03+00:00",
+    "ok": true,
+    "valid_channels": 1,
+    "total_channels_checked": 1,
+    "channels": [
+      {
+        "channel_id": "latest",
+        "name": "滚动新闻",
+        "url": "https://www.chinanews.com.cn/scroll-news/news1.html",
+        "ok": true,
+        "checks": [
+          {
+            "name": "discovery",
+            "ok": true,
+            "detail": "发现 9 篇文章链接",
+            "evidence": {
+              "attempted_sources": [
+                {
+                  "type": "html",
+                  "ok": true,
+                  "returned": 9,
+                  "diagnostics": {
+                    "url": "https://www.chinanews.com.cn/scroll-news/news1.html",
+                    "anchors": 494,
+                    "matched_article_links": 9,
+                    "returned": 9,
+                    "pattern": "^/[a-z]{2,10}/20\\d{2}/\\d{2}-\\d{2}/\\d+\\.shtml$"
+                  }
+                }
+              ],
+              "url": "https://www.chinanews.com.cn/scroll-news/news1.html",
+              "anchors": 494,
+              "matched_article_links": 9,
+              "returned": 9,
+              "pattern": "^/[a-z]{2,10}/20\\d{2}/\\d{2}-\\d{2}/\\d+\\.shtml$"
+            }
+          },
+          {
+            "name": "article_parse",
+            "ok": true,
+            "detail": "3/3 个样本正文提取成功",
+            "evidence": {
+              "samples": [
+                {
+                  "url": "https://www.chinanews.com.cn/dwq/2026/11-17/10733767.shtml",
+                  "http_status": 200,
+                  "fetch_error": null,
+                  "title": "外交部驻港公署举办中国共产党二十届五中全会专题宣介会",
+                  "published_at": "2026-11-17T13:51:00+00:00",
+                  "published_at_local": "2026-11-17T21:51:00+08:00",
+                  "content_chars": 358,
+                  "content_preview": "中新网 香港11月17日电 中国外交部驻香港特别行政区特派员公署(简称“外交部驻港公署”)16日为外国驻港领团举办中国共产党第二十届中央委员会第五次全体会议专题宣介会。外交部驻港公署特派员崔建春作宣讲。来自48家外国驻港总领馆的总领事和领事官员出席。\n崔建春全面介绍了《中共中央关于持之以恒推进全面从严治党若干重大问题的",
+                  "extraction_status": "ok",
+                  "extraction_error": null
+                },
+                {
+                  "url": "https://www.chinanews.com.cn/sh/2026/11-17/10733771.shtml",
+                  "http_status": 200,
+                  "fetch_error": null,
+                  "title": "云南侦办首例替来他明电子烟案",
+                  "published_at": "2026-11-17T13:51:00+00:00",
+                  "published_at_local": "2026-11-17T21:51:00+08:00",
+                  "content_chars": 1011,
+                  "content_preview": "中新网 昆明11月17日电(邹聪 褚晗)近日，云南省昆明市盘龙区烟草专卖局联合公安机关，依法侦办云南首例含替来他明“上头电子烟”案。\n该案件侦办过程中，跨越贵州六盘水、江苏南京、无锡等多地，探索形成“先定物、再定罪、后定人”的处置流程，以专卖监管的专业支撑和跨警种协作担当，为同类案件办理提供参考。\n2026年4月，昆明",
+                  "extraction_status": "ok",
+                  "extraction_error": null
+                },
+                {
+                  "url": "https://www.chinanews.com.cn/gn/2026/11-17/10733770.shtml",
+                  "http_status": 200,
+                  "fetch_error": null,
+                  "title": "（长征胜利90周年）广西桂林老兵永安关下重走长征路",
+                  "published_at": "2026-11-17T13:47:00+00:00",
+                  "published_at_local": "2026-11-17T21:47:00+08:00",
+                  "content_chars": 679,
+                  "content_preview": "中新网 桂林11月17日电(杨宗盛)11月17日，广西桂林市“赓续长征精神·永葆军人本色”纪念红军长征胜利90周年暨军休系统第十届军休文化周在灌阳县文市镇永安关景区驿站启动。\n桂林市退役军人事务局党员和干部职工以及军休干部等代表参加活动。广西壮族自治区退役军人事务厅党组成员、副厅长徐文伟宣布活动开幕，桂林市退役军人事务",
+                  "extraction_status": "ok",
+                  "extraction_error": null
+                }
+              ]
+            }
+          }
+        ],
+        "samples": [
+          {
+            "url": "https://www.chinanews.com.cn/dwq/2026/11-17/10733767.shtml",
+            "http_status": 200,
+            "fetch_error": null,
+            "title": "外交部驻港公署举办中国共产党二十届五中全会专题宣介会",
+            "published_at": "2026-11-17T13:51:00+00:00",
+            "published_at_local": "2026-11-17T21:51:00+08:00",
+            "content_chars": 358,
+            "content_preview": "中新网 香港11月17日电 中国外交部驻香港特别行政区特派员公署(简称“外交部驻港公署”)16日为外国驻港领团举办中国共产党第二十届中央委员会第五次全体会议专题宣介会。外交部驻港公署特派员崔建春作宣讲。来自48家外国驻港总领馆的总领事和领事官员出席。\n崔建春全面介绍了《中共中央关于持之以恒推进全面从严治党若干重大问题的",
+            "extraction_status": "ok",
+            "extraction_error": null
+          },
+          {
+            "url": "https://www.chinanews.com.cn/sh/2026/11-17/10733771.shtml",
+            "http_status": 200,
+            "fetch_error": null,
+            "title": "云南侦办首例替来他明电子烟案",
+            "published_at": "2026-11-17T13:51:00+00:00",
+            "published_at_local": "2026-11-17T21:51:00+08:00",
+            "content_chars": 1011,
+            "content_preview": "中新网 昆明11月17日电(邹聪 褚晗)近日，云南省昆明市盘龙区烟草专卖局联合公安机关，依法侦办云南首例含替来他明“上头电子烟”案。\n该案件侦办过程中，跨越贵州六盘水、江苏南京、无锡等多地，探索形成“先定物、再定罪、后定人”的处置流程，以专卖监管的专业支撑和跨警种协作担当，为同类案件办理提供参考。\n2026年4月，昆明",
+            "extraction_status": "ok",
+            "extraction_error": null
+          },
+          {
+            "url": "https://www.chinanews.com.cn/gn/2026/11-17/10733770.shtml",
+            "http_status": 200,
+            "fetch_error": null,
+            "title": "（长征胜利90周年）广西桂林老兵永安关下重走长征路",
+            "published_at": "2026-11-17T13:47:00+00:00",
+            "published_at_local": "2026-11-17T21:47:00+08:00",
+            "content_chars": 679,
+            "content_preview": "中新网 桂林11月17日电(杨宗盛)11月17日，广西桂林市“赓续长征精神·永葆军人本色”纪念红军长征胜利90周年暨军休系统第十届军休文化周在灌阳县文市镇永安关景区驿站启动。\n桂林市退役军人事务局党员和干部职工以及军休干部等代表参加活动。广西壮族自治区退役军人事务厅党组成员、副厅长徐文伟宣布活动开幕，桂林市退役军人事务",
+            "extraction_status": "ok",
+            "extraction_error": null
+          }
+        ],
+        "errors": []
+      }
+    ],
+    "errors": [],
+    "status": "valid",
+    "validated_only": true,
+    "note": "验证会真实访问栏目页和文章页；只有至少一个频道有可解析正文的样本，该频道才会被 list_channels 返回。"
+  },
+  "isError": false
+}

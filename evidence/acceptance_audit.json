@@ -1,0 +1,331 @@
+{
+  "generated_at": "2026-11-17T14:02:05+00:00",
+  "database": "D:\\Desktop\\新华网MCP\\data\\news.db",
+  "checks": {
+    "ten_human_verifiable_samples": {
+      "count": 10,
+      "title_match_count": 10,
+      "date_match_count": 10,
+      "url_match_count": 10,
+      "content_ok_count": 10,
+      "nav_clean_count": 10,
+      "samples": [
+        {
+          "site_id": "xinhua",
+          "url": "https://www.news.cn/politics/20261117/3f1e8a88dbcb46df9ea455ffb5e144d9/c.html",
+          "db_title": "新华社权威快报丨我国将逐步实现疫苗处方全覆盖",
+          "live_title": "新华社权威快报丨我国将逐步实现疫苗处方全覆盖",
+          "db_published_at_local": "2026-11-17T14:41:40+08:00",
+          "live_published_at_local": "2026-11-17T14:41:40+08:00",
+          "title_match": true,
+          "date_match": true,
+          "url_match": true,
+          "content_ok": true,
+          "live_status": "ok",
+          "live_http_status": 200,
+          "live_content_chars": 365,
+          "nav_markers": [],
+          "nav_clean": true
+        },
+        {
+          "site_id": "xinhua",
+          "url": "https://www.news.cn/politics/20261117/042b31d8108b4658be9777ad2f761c5e/c.html",
+          "db_title": "医保钱包代缴居民医保费统筹地区范围不断扩大",
+          "live_title": "医保钱包代缴居民医保费统筹地区范围不断扩大",
+          "db_published_at_local": "2026-11-17T08:02:10+08:00",
+          "live_published_at_local": "2026-11-17T08:02:10+08:00",
+          "title_match": true,
+          "date_match": true,
+          "url_match": true,
+          "content_ok": true,
+          "live_status": "ok",
+          "live_http_status": 200,
+          "live_content_chars": 295,
+          "nav_markers": [],
+          "nav_clean": true
+        },
+        {
+          "site_id": "xinhua",
+          "url": "https://www.news.cn/politics/20261116/7d5d0633cf2b4f428a6147a65755f530/c.html",
+          "db_title": "上海博物馆与美国、德国顶尖博物馆签约促文化交流",
+          "live_title": "上海博物馆与美国、德国顶尖博物馆签约促文化交流",
+          "db_published_at_local": "2026-11-16T23:43:07+08:00",
+          "live_published_at_local": "2026-11-16T23:43:07+08:00",
+          "title_match": true,
+          "date_match": true,
+          "url_match": true,
+          "content_ok": true,
+          "live_status": "ok",
+          "live_http_status": 200,
+          "live_content_chars": 641,
+          "nav_markers": [],
+          "nav_clean": true
+        },
+        {
+          "site_id": "xinhua",
+          "url": "https://www.news.cn/politics/20261116/66510003e7d74ce09cca8e317209a754/c.html",
+          "db_title": "沈阳故宫：400岁宫殿，为何迎来100岁生日？",
+          "live_title": "沈阳故宫：400岁宫殿，为何迎来100岁生日？",
+          "db_published_at_local": "2026-11-16T19:52:53+08:00",
+          "live_published_at_local": "2026-11-16T19:52:53+08:00",
+          "title_match": true,
+          "date_match": true,
+          "url_match": true,
+          "content_ok": true,
+          "live_status": "ok",
+          "live_http_status": 200,
+          "live_content_chars": 390,
+          "nav_markers": [],
+          "nav_clean": true
+        },
+        {
+          "site_id": "xinhua",
+          "url": "https://www.news.cn/politics/20261116/dbee237d884a4fbebca9c40d5633fcb7/c.html",
+          "db_title": "第三轮第七批中央生态环保督察完成督察进驻阶段工作",
+          "live_title": "第三轮第七批中央生态环保督察完成督察进驻阶段工作",
+          "db_published_at_local": "2026-11-16T19:26:28+08:00",
+          "live_published_at_local": "2026-11-16T19:26:28+08:00",
+          "title_match": true,
+          "date_match": true,
+          "url_match": true,
+          "content_ok": true,
+          "live_status": "ok",
+          "live_http_status": 200,
+          "live_content_chars": 580,
+          "nav_markers": [],
+          "nav_clean": true
+        },
+        {
+          "site_id": "chinanews",
+          "url": "https://www.chinanews.com.cn/gn/2026/11-17/10733770.shtml",
+          "db_title": "（长征胜利90周年）广西桂林老兵永安关下重走长征路",
+          "live_title": "（长征胜利90周年）广西桂林老兵永安关下重走长征路",
+          "db_published_at_local": "2026-11-17T21:47:00+08:00",
+          "live_published_at_local": "2026-11-17T21:47:00+08:00",
+          "title_match": true,
+          "date_match": true,
+          "url_match": true,
+          "content_ok": true,
+          "live_status": "ok",
+          "live_http_status": 200,
+          "live_content_chars": 678,
+          "nav_markers": [],
+          "nav_clean": true
+        },
+        {
+          "site_id": "chinanews",
+          "url": "https://www.chinanews.com.cn/gj/2026/11-17/10733772.shtml",
+          "db_title": "欧盟称今年前三季度经济增长好于预期",
+          "live_title": "欧盟称今年前三季度经济增长好于预期",
+          "db_published_at_local": "2026-11-17T21:46:00+08:00",
+          "live_published_at_local": "2026-11-17T21:46:00+08:00",
+          "title_match": true,
+          "date_match": true,
+          "url_match": true,
+          "content_ok": true,
+          "live_status": "ok",
+          "live_http_status": 200,
+          "live_content_chars": 762,
+          "nav_markers": [],
+          "nav_clean": true
+        },
+        {
+          "site_id": "chinanews",
+          "url": "https://www.chinanews.com.cn/dwq/2026/11-17/10733768.shtml",
+          "db_title": "广东迎候鸟迁徙高峰 黑脸琵鹭飞舞深圳湾",
+          "live_title": "广东迎候鸟迁徙高峰 黑脸琵鹭飞舞深圳湾",
+          "db_published_at_local": "2026-11-17T21:45:00+08:00",
+          "live_published_at_local": "2026-11-17T21:45:00+08:00",
+          "title_match": true,
+          "date_match": true,
+          "url_match": true,
+          "content_ok": true,
+          "live_status": "ok",
+          "live_http_status": 200,
+          "live_content_chars": 1001,
+          "nav_markers": [],
+          "nav_clean": true
+        },
+        {
+          "site_id": "chinanews",
+          "url": "https://www.chinanews.com.cn/gj/2026/11-17/10733742.shtml",
+          "db_title": "一名驻日美军涉嫌酒后损坏财物被捕",
+          "live_title": "一名驻日美军涉嫌酒后损坏财物被捕",
+          "db_published_at_local": "2026-11-17T21:45:00+08:00",
+          "live_published_at_local": "2026-11-17T21:45:00+08:00",
+          "title_match": true,
+          "date_match": true,
+          "url_match": true,
+          "content_ok": true,
+          "live_status": "ok",
+          "live_http_status": 200,
+          "live_content_chars": 279,
+          "nav_markers": [],
+          "nav_clean": true
+        },
+        {
+          "site_id": "chinanews",
+          "url": "https://www.chinanews.com.cn/hr/2026/11-17/10733769.shtml",
+          "db_title": "巴西累西腓华侨华人协会拜会中国驻累总领馆",
+          "live_title": "巴西累西腓华侨华人协会拜会中国驻累总领馆",
+          "db_published_at_local": "2026-11-17T21:45:00+08:00",
+          "live_published_at_local": "2026-11-17T21:45:00+08:00",
+          "title_match": true,
+          "date_match": true,
+          "url_match": true,
+          "content_ok": true,
+          "live_status": "ok",
+          "live_http_status": 200,
+          "live_content_chars": 275,
+          "nav_markers": [],
+          "nav_clean": true
+        }
+      ],
+      "passed": true
+    },
+    "ten_visible_body_extractions": {
+      "count": 10,
+      "urls": [
+        "https://www.chinanews.com.cn/gn/2026/11-17/10733770.shtml",
+        "https://www.chinanews.com.cn/gj/2026/11-17/10733772.shtml",
+        "https://www.chinanews.com.cn/dwq/2026/11-17/10733768.shtml",
+        "https://www.chinanews.com.cn/gj/2026/11-17/10733742.shtml",
+        "https://www.chinanews.com.cn/hr/2026/11-17/10733769.shtml",
+        "https://www.chinanews.com.cn/gj/2026/11-17/10733746.shtml",
+        "https://www.chinanews.com.cn/cul/2026/11-17/10733765.shtml",
+        "https://www.chinanews.com.cn/cul/2026/11-17/10733766.shtml",
+        "https://www.chinanews.com.cn/tp/2026/11-17/10733761.shtml",
+        "https://www.chinanews.com.cn/cj/2026/11-17/10733763.shtml"
+      ],
+      "content_chars": [
+        678,
+        762,
+        1001,
+        279,
+        275,
+        718,
+        573,
+        1171,
+        187,
+        890
+      ],
+      "passed": true
+    },
+    "realtime_url_not_previously_saved": {
+      "url": "https://www.news.cn/politics/20261113/9c1e8a597d4d4003a0e72f2b4008c8eb/c.html",
+      "status": "ok",
+      "title": "2027年全国硕士研究生招生考试报名人数为347万",
+      "published_at_local": "2026-11-13T11:33:10+08:00",
+      "content_chars": 647,
+      "inserted": true,
+      "passed": true
+    },
+    "invalid_url_rejected": {
+      "status": "rejected",
+      "error_code": "URL_NOT_ALLOWED",
+      "passed": true
+    },
+    "http_404_status": {
+      "http_status": 404,
+      "status": "failed",
+      "error_code": "HTTP_404",
+      "error": "HTTP 404",
+      "passed": true
+    },
+    "dedupe_and_refresh_audit": {
+      "total_articles": 32,
+      "expected_after_realtime_fetch": 32,
+      "runs": [
+        {
+          "run_id": "97f34bd44fc1450b8d04594c2ebc4052",
+          "started_at": "2026-11-17T14:01:41+00:00",
+          "attempted": 3,
+          "inserted": 0,
+          "updated": 0,
+          "failed": 0
+        },
+        {
+          "run_id": "e9bb3df46ca04d94bfba857330d63e4a",
+          "started_at": "2026-11-17T14:00:57+00:00",
+          "attempted": 0,
+          "inserted": 0,
+          "updated": 0,
+          "failed": 0
+        },
+        {
+          "run_id": "5f7141218fba4c998589e8689902e8c5",
+          "started_at": "2026-11-17T14:00:54+00:00",
+          "attempted": 0,
+          "inserted": 0,
+          "updated": 0,
+          "failed": 0
+        },
+        {
+          "run_id": "2417365e390f415ea1b797a944827064",
+          "started_at": "2026-11-17T14:00:42+00:00",
+          "attempted": 0,
+          "inserted": 0,
+          "updated": 0,
+          "failed": 0
+        },
+        {
+          "run_id": "b1426f7c4a134c2097f894d3827c0145",
+          "started_at": "2026-11-17T14:00:39+00:00",
+          "attempted": 0,
+          "inserted": 0,
+          "updated": 0,
+          "failed": 0
+        },
+        {
+          "run_id": "0904f623660043c780f3c847f0966e04",
+          "started_at": "2026-11-17T14:00:35+00:00",
+          "attempted": 0,
+          "inserted": 0,
+          "updated": 0,
+          "failed": 0
+        },
+        {
+          "run_id": "e5bce5e57f2548058aa52f321dda589a",
+          "started_at": "2026-11-17T14:00:34+00:00",
+          "attempted": 0,
+          "inserted": 0,
+          "updated": 0,
+          "failed": 0
+        },
+        {
+          "run_id": "c867b57f6fee4aa5b4830dbd8c3e011f",
+          "started_at": "2026-11-17T14:00:07+00:00",
+          "attempted": 3,
+          "inserted": 0,
+          "updated": 0,
+          "failed": 0
+        },
+        {
+          "run_id": "3ebc48a51d3047a4a1b5860d2a1e42b7",
+          "started_at": "2026-11-17T13:57:42+00:00",
+          "attempted": 2,
+          "inserted": 0,
+          "updated": 0,
+          "failed": 0
+        },
+        {
+          "run_id": "a1bd5d8f79824190bd58be1089525ec4",
+          "started_at": "2026-11-17T13:54:03+00:00",
+          "attempted": 12,
+          "inserted": 0,
+          "updated": 0,
+          "failed": 0
+        },
+        {
+          "run_id": "1a48ec4f8bd646ec845d239b0327c12f",
+          "started_at": "2026-11-17T13:53:15+00:00",
+          "attempted": 12,
+          "inserted": 12,
+          "updated": 0,
+          "failed": 0
+        }
+      ],
+      "passed": true
+    }
+  }
+}

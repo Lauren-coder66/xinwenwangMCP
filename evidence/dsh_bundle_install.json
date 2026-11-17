@@ -1,0 +1,21 @@
+{
+  "action": "install_bundle",
+  "target": "D:\\Desktop\\新华网MCP\\integrations\\dsh-news-mcp",
+  "stage": "enable",
+  "bundle": "@local/news-mcp-connector",
+  "version": "1.0.0",
+  "enabled": true,
+  "changed": true,
+  "application": "applied",
+  "warnings": [],
+  "observed_tools": [
+    "mcp__news__list_sites",
+    "mcp__news__list_channels",
+    "mcp__news__get_latest_news",
+    "mcp__news__search_news",
+    "mcp__news__get_article",
+    "mcp__news__refresh_news",
+    "mcp__news__inspect_site",
+    "mcp__news__validate_site"
+  ]
+}

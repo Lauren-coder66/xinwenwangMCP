@@ -1,0 +1,35 @@
+{
+  "mode": "proxy-refused",
+  "tested_at": "2026-11-17T14:04:13+00:00",
+  "env": {
+    "NEWS_MCP_OFFLINE": null,
+    "HTTPS_PROXY": "http://127.0.0.1:9"
+  },
+  "article_count_before": 32,
+  "article_count_after": 32,
+  "refresh_status": "error",
+  "refresh_attempted": 0,
+  "refresh_failed": 0,
+  "refresh_error_codes": [
+    "FETCH_CONNECT_ERROR",
+    "NO_CANDIDATES"
+  ],
+  "refresh_errors": [
+    {
+      "code": "FETCH_CONNECT_ERROR",
+      "message": "robots 连接失败，策略 closed: [WinError 10061] 由于目标计算机积极拒绝，无法连接。"
+    },
+    {
+      "code": "NO_CANDIDATES",
+      "message": "没有发现任何文章链接，未进行文章抓取"
+    }
+  ],
+  "latest_status": "ok",
+  "latest_data_status": "cache_after_refresh_error",
+  "latest_error": null,
+  "latest_refresh_errors": [
+    "FETCH_CONNECT_ERROR",
+    "NO_CANDIDATES"
+  ],
+  "no_articles_inserted": true
+}

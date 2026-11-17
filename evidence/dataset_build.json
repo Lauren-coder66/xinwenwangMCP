@@ -1,0 +1,629 @@
+{
+  "started_at": "2026-11-17T13:52:31+00:00",
+  "steps": [
+    {
+      "operation": "validate_site",
+      "site_id": "xinhua",
+      "ok": true,
+      "valid_channels": 6,
+      "channels": [
+        {
+          "channel_id": "politics",
+          "ok": true,
+          "samples": [
+            {
+              "url": "https://www.news.cn/politics/20261117/3f1e8a88dbcb46df9ea455ffb5e144d9/c.html",
+              "http_status": 200,
+              "title": "新华社权威快报丨我国将逐步实现疫苗处方全覆盖",
+              "published_at_local": "2026-11-17T14:41:40+08:00",
+              "content_chars": 365,
+              "extraction_status": "ok"
+            },
+            {
+              "url": "https://www.news.cn/politics/20261117/ca1bb9013a0c438ab5b1a8b212348933/c.html",
+              "http_status": 200,
+              "title": "新华社消息丨我国北斗终端设备应用数量近4200万",
+              "published_at_local": "2026-11-17T11:04:48+08:00",
+              "content_chars": 21,
+              "extraction_status": "partial"
+            },
+            {
+              "url": "https://www.news.cn/politics/20261117/042b31d8108b4658be9777ad2f761c5e/c.html",
+              "http_status": 200,
+              "title": "医保钱包代缴居民医保费统筹地区范围不断扩大",
+              "published_at_local": "2026-11-17T08:02:10+08:00",
+              "content_chars": 295,
+              "extraction_status": "ok"
+            }
+          ]
+        },
+        {
+          "channel_id": "world",
+          "ok": true,
+          "samples": [
+            {
+              "url": "https://www.news.cn/world/20261115/41e76884cb344cbab3cf5b224013ae1a/c.html",
+              "http_status": 200,
+              "title": "列国鉴丨两亿棵橄榄树 土耳其如何从扩种到增收",
+              "published_at_local": "2026-11-15T15:29:21+08:00",
+              "content_chars": 1991,
+              "extraction_status": "ok"
+            },
+            {
+              "url": "https://www.news.cn/world/20261112/6824ec433bd24051a584c8c689b8d0bd/c.html",
+              "http_status": 200,
+              "title": "国际随笔｜走近中国，更新眼光",
+              "published_at_local": "2026-11-12T19:39:55+08:00",
+              "content_chars": 1369,
+              "extraction_status": "ok"
+            },
+            {
+              "url": "https://www.news.cn/world/20261113/cb6c3ced3ab44f42825c66baaec7f256/c.html",
+              "http_status": 200,
+              "title": "中越边境金水河口岸见证APEC合作红利",
+              "published_at_local": "2026-11-13T07:58:56+08:00",
+              "content_chars": 220,
+              "extraction_status": "ok"
+            }
+          ]
+        },
+        {
+          "channel_id": "fortune",
+          "ok": true,
+          "samples": [
+            {
+              "url": "https://www.news.cn/fortune/20261117/9d70b558e94c4292a3b71940d3498537/c.html",
+              "http_status": 200,
+              "title": "财经深一度丨AI短剧、数字人直播等新业态如何纳税",
+              "published_at_local": "2026-11-17T21:32:57+08:00",
+              "content_chars": 1484,
+              "extraction_status": "ok"
+            },
+            {
+              "url": "https://www.news.cn/fortune/20261117/f047f80e6b3547c9b92f32f7d6d80e22/c.html",
+              "http_status": 200,
+              "title": "商务部：中加同意将初步联合安排的相关豁免措施延长2年",
+              "published_at_local": "2026-11-17T21:20:38+08:00",
+              "content_chars": 379,
+              "extraction_status": "ok"
+            },
+            {
+              "url": "https://www.news.cn/fortune/20261117/35f4efa1cf834c44a844b4bddde45318/c.html",
+              "http_status": 200,
+              "title": "促进回收行业高质量发展——多部门详解深入推进再生资源回收体系建设",
+              "published_at_local": "2026-11-17T20:43:13+08:00",
+              "content_chars": 1728,
+              "extraction_status": "ok"
+            }
+          ]
+        },
+        {
+          "channel_id": "tech",
+          "ok": true,
+          "samples": [
+            {
+              "url": "https://www.news.cn/tech/20261108/4561302fab1f4856819a59c69b100817/c.html",
+              "http_status": 200,
+              "title": "携个体化放疗亮相进博，走进西门子医疗肿瘤医学",
+              "published_at_local": "2026-11-08T11:56:17+08:00",
+              "content_chars": 86,
+              "extraction_status": "ok"
+            },
+            {
+              "url": "https://www.news.cn/tech/20261106/03e933c5011f4ea9b09c03b9c8c8bb32/c.html",
+              "http_status": 200,
+              "title": "第九届进博会丨6G终端原型机首秀 AI与下一代通信双向赋能",
+              "published_at_local": "2026-11-06T20:32:01+08:00",
+              "content_chars": 1613,
+              "extraction_status": "ok"
+            },
+            {
+              "url": "https://www.news.cn/tech/20261106/0919784bb4694ff180956d06ffd0f0b2/c.html",
+              "http_status": 200,
+              "title": "进博观察丨松下九赴进博之约：三条展区线索里的中国产业答案",
+              "published_at_local": "2026-11-06T16:34:25+08:00",
+              "content_chars": 2838,
+              "extraction_status": "ok"
+            }
+          ]
+        },
+        {
+          "channel_id": "culture",
+          "ok": true,
+          "samples": [
+            {
+              "url": "https://www.news.cn/culture/20261117/cd1a41059c394fc5ab1f8d5222e82026/c.html",
+              "http_status": 200,
+              "title": "筒存香，时光酿酸——藏于山野的非遗酸茶",
+              "published_at_local": "2026-11-17T08:52:20+08:00",
+              "content_chars": 15062,
+              "extraction_status": "ok"
+            },
+            {
+              "url": "https://www.news.cn/culture/20261116/5aebfb04a9974f23ae8e59ba60f6a228/c.html",
+              "http_status": 200,
+              "title": "走进匈牙利李斯特音乐学院",
+              "published_at_local": "2026-11-16T08:44:41+08:00",
+              "content_chars": 930,
+              "extraction_status": "ok"
+            },
+            {
+              "url": "https://www.news.cn/culture/20260512/1ffe333676c44d14a86dbabc75a54c7e/c.html",
+              "http_status": 200,
+              "title": "文脉兴邦 赋能兴业｜2026文化经济发展大会·宝鸡专场圆满收官",
+              "published_at_local": "2026-05-12T10:09:31+08:00",
+              "content_chars": 3946,
+              "extraction_status": "ok"
+            }
+          ]
+        },
+        {
+          "channel_id": "sports",
+          "ok": true,
+          "samples": [
+            {
+              "url": "https://www.news.cn/sports/20261117/984f67e119ca462f93b128d93ff192d9/c.html",
+              "http_status": 200,
+              "title": "国足主帅邵佳一：每场比赛都不容有失",
+              "published_at_local": "2026-11-17T09:27:06+08:00",
+              "content_chars": 773,
+              "extraction_status": "ok"
+            },
+            {
+              "url": "https://www.news.cn/sports/20261117/e2c0fd06989b40b4961274c595875a17/c.html",
+              "http_status": 200,
+              "title": "国际足球邀请赛：中国队进行赛前训练",
+              "published_at_local": "2026-11-17T09:37:20+08:00",
+              "content_chars": 1141,
+              "extraction_status": "ok"
+            },
+            {
+              "url": "https://www.news.cn/sports/20261117/911202ae198548ecacb6fea2704dc8fb/c.html",
+              "http_status": 200,
+              "title": "欧国联A级联赛：德国队胜荷兰队",
+              "published_at_local": "2026-11-17T09:37:23+08:00",
+              "content_chars": 727,
+              "extraction_status": "ok"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "operation": "validate_site",
+      "site_id": "chinanews",
+      "ok": true,
+      "valid_channels": 1,
+      "channels": [
+        {
+          "channel_id": "latest",
+          "ok": true,
+          "samples": [
+            {
+              "url": "https://www.chinanews.com.cn/gn/2026/11-17/10733770.shtml",
+              "http_status": 200,
+              "title": "（长征胜利90周年）广西桂林老兵永安关下重走长征路",
+              "published_at_local": "2026-11-17T21:47:00+08:00",
+              "content_chars": 679,
+              "extraction_status": "ok"
+            },
+            {
+              "url": "https://www.chinanews.com.cn/gj/2026/11-17/10733772.shtml",
+              "http_status": 200,
+              "title": "欧盟称今年前三季度经济增长好于预期",
+              "published_at_local": "2026-11-17T21:46:00+08:00",
+              "content_chars": 765,
+              "extraction_status": "ok"
+            },
+            {
+              "url": "https://www.chinanews.com.cn/hr/2026/11-17/10733769.shtml",
+              "http_status": 200,
+              "title": "巴西累西腓华侨华人协会拜会中国驻累总领馆",
+              "published_at_local": "2026-11-17T21:45:00+08:00",
+              "content_chars": 278,
+              "extraction_status": "ok"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "operation": "refresh_news",
+      "ok": true,
+      "status": "partial",
+      "site_id": "xinhua",
+      "site_name": "新华网",
+      "channel": "politics",
+      "channel_name": "时政",
+      "requested_limit": 12,
+      "attempted_count": 12,
+      "discovered_count": 12,
+      "inserted_count": 12,
+      "updated_count": 0,
+      "failed_count": 0,
+      "partial_count": 1,
+      "source_mode": "html",
+      "fetched_at": "2026-11-17T13:53:34+00:00",
+      "started_at": "2026-11-17T13:53:15+00:00",
+      "errors": [
+        {
+          "url": "https://www.news.cn/politics/20261117/ca1bb9013a0c438ab5b1a8b212348933/c.html",
+          "code": "PARTIAL_EXTRACTION",
+          "message": "正文过短（21 字符，阈值 80）",
+          "http_status": 200
+        }
+      ],
+      "run_id": "1a48ec4f8bd646ec845d239b0327c12f",
+      "live_urls": [
+        "https://www.news.cn/politics/20261115/3b6d329a643546afb1d3c09e52b59246/c.html",
+        "https://www.news.cn/politics/20261115/7de66aa817d74f759c440d0de8ce0554/c.html",
+        "https://www.news.cn/politics/20261115/badea5ff0622469b957ddc81e887e89a/c.html",
+        "https://www.news.cn/politics/20261116/08922ee196814f109219b25e403d705c/c.html",
+        "https://www.news.cn/politics/20261116/369a10ef11a446bda631ac4d0de202a7/c.html",
+        "https://www.news.cn/politics/20261116/66510003e7d74ce09cca8e317209a754/c.html",
+        "https://www.news.cn/politics/20261116/7d5d0633cf2b4f428a6147a65755f530/c.html",
+        "https://www.news.cn/politics/20261116/dbee237d884a4fbebca9c40d5633fcb7/c.html",
+        "https://www.news.cn/politics/20261116/e1fa635c120e4f62859ad96b6170341e/c.html",
+        "https://www.news.cn/politics/20261117/042b31d8108b4658be9777ad2f761c5e/c.html",
+        "https://www.news.cn/politics/20261117/3f1e8a88dbcb46df9ea455ffb5e144d9/c.html",
+        "https://www.news.cn/politics/20261117/ca1bb9013a0c438ab5b1a8b212348933/c.html"
+      ],
+      "scope": "live_http_fetch"
+    },
+    {
+      "operation": "refresh_news",
+      "ok": true,
+      "status": "ok",
+      "site_id": "xinhua",
+      "site_name": "新华网",
+      "channel": "world",
+      "channel_name": "国际",
+      "requested_limit": 8,
+      "attempted_count": 8,
+      "discovered_count": 8,
+      "inserted_count": 8,
+      "updated_count": 0,
+      "failed_count": 0,
+      "partial_count": 0,
+      "source_mode": "html",
+      "fetched_at": "2026-11-17T13:53:47+00:00",
+      "started_at": "2026-11-17T13:53:34+00:00",
+      "errors": [],
+      "run_id": "51b23b287dfb488e9f460c1e8af9a01f",
+      "live_urls": [
+        "https://www.news.cn/world/20261112/6824ec433bd24051a584c8c689b8d0bd/c.html",
+        "https://www.news.cn/world/20261112/ed95695f7f3842e8a87e2a9828d5f147/c.html",
+        "https://www.news.cn/world/20261113/cb6c3ced3ab44f42825c66baaec7f256/c.html",
+        "https://www.news.cn/world/20261114/bbf3057de13545e9b7c0500519e62da5/c.html",
+        "https://www.news.cn/world/20261115/41e76884cb344cbab3cf5b224013ae1a/c.html",
+        "https://www.news.cn/world/20261116/73c79e745fb741d0ac3eee65ead2446e/c.html",
+        "https://www.news.cn/world/20261116/9612ddbdd0304e4098a1017494b08252/c.html",
+        "https://www.news.cn/world/20261116/efbfaa50226142a4a141058569dd3170/c.html"
+      ],
+      "scope": "live_http_fetch"
+    },
+    {
+      "operation": "refresh_news",
+      "ok": true,
+      "status": "ok",
+      "site_id": "chinanews",
+      "site_name": "中国新闻网",
+      "channel": "latest",
+      "channel_name": "滚动新闻",
+      "requested_limit": 10,
+      "attempted_count": 10,
+      "discovered_count": 10,
+      "inserted_count": 10,
+      "updated_count": 0,
+      "failed_count": 0,
+      "partial_count": 0,
+      "source_mode": "html",
+      "fetched_at": "2026-11-17T13:54:03+00:00",
+      "started_at": "2026-11-17T13:53:47+00:00",
+      "errors": [],
+      "run_id": "98d31839b6384f70b3b6efea3c4362a2",
+      "live_urls": [
+        "https://www.chinanews.com.cn/cj/2026/11-17/10733763.shtml",
+        "https://www.chinanews.com.cn/cul/2026/11-17/10733765.shtml",
+        "https://www.chinanews.com.cn/cul/2026/11-17/10733766.shtml",
+        "https://www.chinanews.com.cn/dwq/2026/11-17/10733768.shtml",
+        "https://www.chinanews.com.cn/gj/2026/11-17/10733742.shtml",
+        "https://www.chinanews.com.cn/gj/2026/11-17/10733746.shtml",
+        "https://www.chinanews.com.cn/gj/2026/11-17/10733772.shtml",
+        "https://www.chinanews.com.cn/gn/2026/11-17/10733770.shtml",
+        "https://www.chinanews.com.cn/hr/2026/11-17/10733769.shtml",
+        "https://www.chinanews.com.cn/tp/2026/11-17/10733761.shtml"
+      ],
+      "scope": "live_http_fetch"
+    },
+    {
+      "operation": "refresh_news_repeat",
+      "ok": true,
+      "status": "partial",
+      "site_id": "xinhua",
+      "site_name": "新华网",
+      "channel": "politics",
+      "channel_name": "时政",
+      "requested_limit": 12,
+      "attempted_count": 12,
+      "discovered_count": 12,
+      "inserted_count": 0,
+      "updated_count": 0,
+      "failed_count": 0,
+      "partial_count": 1,
+      "source_mode": "html",
+      "fetched_at": "2026-11-17T13:54:21+00:00",
+      "started_at": "2026-11-17T13:54:03+00:00",
+      "errors": [
+        {
+          "url": "https://www.news.cn/politics/20261117/ca1bb9013a0c438ab5b1a8b212348933/c.html",
+          "code": "PARTIAL_EXTRACTION",
+          "message": "正文过短（21 字符，阈值 80）",
+          "http_status": 200
+        }
+      ],
+      "run_id": "a1bd5d8f79824190bd58be1089525ec4",
+      "live_urls": [
+        "https://www.news.cn/politics/20261115/3b6d329a643546afb1d3c09e52b59246/c.html",
+        "https://www.news.cn/politics/20261115/7de66aa817d74f759c440d0de8ce0554/c.html",
+        "https://www.news.cn/politics/20261115/badea5ff0622469b957ddc81e887e89a/c.html",
+        "https://www.news.cn/politics/20261116/08922ee196814f109219b25e403d705c/c.html",
+        "https://www.news.cn/politics/20261116/369a10ef11a446bda631ac4d0de202a7/c.html",
+        "https://www.news.cn/politics/20261116/66510003e7d74ce09cca8e317209a754/c.html",
+        "https://www.news.cn/politics/20261116/7d5d0633cf2b4f428a6147a65755f530/c.html",
+        "https://www.news.cn/politics/20261116/dbee237d884a4fbebca9c40d5633fcb7/c.html",
+        "https://www.news.cn/politics/20261116/e1fa635c120e4f62859ad96b6170341e/c.html",
+        "https://www.news.cn/politics/20261117/042b31d8108b4658be9777ad2f761c5e/c.html",
+        "https://www.news.cn/politics/20261117/3f1e8a88dbcb46df9ea455ffb5e144d9/c.html",
+        "https://www.news.cn/politics/20261117/ca1bb9013a0c438ab5b1a8b212348933/c.html"
+      ],
+      "scope": "live_http_fetch"
+    }
+  ],
+  "completed_at": "2026-11-17T13:54:21+00:00",
+  "article_count": 30,
+  "sites": {
+    "ok": true,
+    "status": "ok",
+    "sites": [
+      {
+        "site_id": "chinanews",
+        "name": "中国新闻网",
+        "homepage": "https://www.chinanews.com.cn/",
+        "enabled": true,
+        "timezone": "Asia/Shanghai",
+        "status": "active",
+        "validated_at": "2026-11-17T13:53:15+00:00",
+        "channels_total": 1,
+        "channels_valid": 1,
+        "articles": 10,
+        "last_refresh_at": "2026-11-17T13:54:03+00:00",
+        "config_hash": "a8f49422a796570746f01a6caa1a0697891d9d8a3d38e0a62585fab0f37b50c7",
+        "config_error": null
+      },
+      {
+        "site_id": "xinhua",
+        "name": "新华网",
+        "homepage": "https://www.news.cn/",
+        "enabled": true,
+        "timezone": "Asia/Shanghai",
+        "status": "active",
+        "validated_at": "2026-11-17T13:53:08+00:00",
+        "channels_total": 6,
+        "channels_valid": 6,
+        "articles": 20,
+        "last_refresh_at": "2026-11-17T13:54:21+00:00",
+        "config_hash": "c183dfc7a891e32de1d404a6abea082cd6c70535e9d2e181c547035e26087fcc",
+        "config_error": null
+      }
+    ],
+    "config_errors": [],
+    "default_site": "xinhua"
+  },
+  "channels": {
+    "ok": true,
+    "status": "ok",
+    "site_id": "all",
+    "validated_only": true,
+    "channels": [
+      {
+        "site_id": "chinanews",
+        "site_name": "中国新闻网",
+        "channel": "latest",
+        "channel_id": "latest",
+        "name": "滚动新闻",
+        "url": "https://www.chinanews.com.cn/scroll-news/news1.html",
+        "source_url": "https://www.chinanews.com.cn/scroll-news/news1.html",
+        "validated": true,
+        "validation_status": "valid",
+        "last_checked_at": "2026-11-17T13:53:15+00:00",
+        "last_refresh_at": "2026-11-17T13:54:03+00:00",
+        "article_count": 10,
+        "last_error": null,
+        "timezone": "Asia/Shanghai"
+      },
+      {
+        "site_id": "xinhua",
+        "site_name": "新华网",
+        "channel": "culture",
+        "channel_id": "culture",
+        "name": "文化",
+        "url": "https://www.news.cn/culture/",
+        "source_url": "https://www.news.cn/culture/",
+        "validated": true,
+        "validation_status": "valid",
+        "last_checked_at": "2026-11-17T13:53:08+00:00",
+        "last_refresh_at": null,
+        "article_count": 0,
+        "last_error": null,
+        "timezone": "Asia/Shanghai"
+      },
+      {
+        "site_id": "xinhua",
+        "site_name": "新华网",
+        "channel": "fortune",
+        "channel_id": "fortune",
+        "name": "财经",
+        "url": "https://www.news.cn/fortune/index.htm",
+        "source_url": "https://www.news.cn/fortune/index.htm",
+        "validated": true,
+        "validation_status": "valid",
+        "last_checked_at": "2026-11-17T13:53:08+00:00",
+        "last_refresh_at": null,
+        "article_count": 0,
+        "last_error": null,
+        "timezone": "Asia/Shanghai"
+      },
+      {
+        "site_id": "xinhua",
+        "site_name": "新华网",
+        "channel": "politics",
+        "channel_id": "politics",
+        "name": "时政",
+        "url": "https://www.news.cn/politics/",
+        "source_url": "https://www.news.cn/politics/",
+        "validated": true,
+        "validation_status": "valid",
+        "last_checked_at": "2026-11-17T13:53:08+00:00",
+        "last_refresh_at": "2026-11-17T13:54:21+00:00",
+        "article_count": 12,
+        "last_error": "正文过短（21 字符，阈值 80）",
+        "timezone": "Asia/Shanghai"
+      },
+      {
+        "site_id": "xinhua",
+        "site_name": "新华网",
+        "channel": "sports",
+        "channel_id": "sports",
+        "name": "体育",
+        "url": "https://www.news.cn/sports/",
+        "source_url": "https://www.news.cn/sports/",
+        "validated": true,
+        "validation_status": "valid",
+        "last_checked_at": "2026-11-17T13:53:08+00:00",
+        "last_refresh_at": null,
+        "article_count": 0,
+        "last_error": null,
+        "timezone": "Asia/Shanghai"
+      },
+      {
+        "site_id": "xinhua",
+        "site_name": "新华网",
+        "channel": "tech",
+        "channel_id": "tech",
+        "name": "科技",
+        "url": "https://www.news.cn/tech/",
+        "source_url": "https://www.news.cn/tech/",
+        "validated": true,
+        "validation_status": "valid",
+        "last_checked_at": "2026-11-17T13:53:08+00:00",
+        "last_refresh_at": null,
+        "article_count": 0,
+        "last_error": null,
+        "timezone": "Asia/Shanghai"
+      },
+      {
+        "site_id": "xinhua",
+        "site_name": "新华网",
+        "channel": "world",
+        "channel_id": "world",
+        "name": "国际",
+        "url": "https://www.news.cn/world/",
+        "source_url": "https://www.news.cn/world/",
+        "validated": true,
+        "validation_status": "valid",
+        "last_checked_at": "2026-11-17T13:53:08+00:00",
+        "last_refresh_at": "2026-11-17T13:53:47+00:00",
+        "article_count": 8,
+        "last_error": null,
+        "timezone": "Asia/Shanghai"
+      }
+    ],
+    "count": 7,
+    "note": "仅返回已通过 validate_site 真实验证的频道。"
+  },
+  "recent_runs": [
+    {
+      "run_id": "a1bd5d8f79824190bd58be1089525ec4",
+      "site_id": "xinhua",
+      "channel_id": "politics",
+      "requested_limit": 12,
+      "attempted_count": 12,
+      "discovered_count": 12,
+      "inserted_count": 0,
+      "updated_count": 0,
+      "failed_count": 0,
+      "partial_count": 1,
+      "status": "partial",
+      "source_mode": "html",
+      "started_at": "2026-11-17T13:54:03+00:00",
+      "finished_at": "2026-11-17T13:54:21+00:00",
+      "errors": [
+        {
+          "url": "https://www.news.cn/politics/20261117/ca1bb9013a0c438ab5b1a8b212348933/c.html",
+          "code": "PARTIAL_EXTRACTION",
+          "message": "正文过短（21 字符，阈值 80）",
+          "http_status": 200
+        }
+      ]
+    },
+    {
+      "run_id": "98d31839b6384f70b3b6efea3c4362a2",
+      "site_id": "chinanews",
+      "channel_id": "latest",
+      "requested_limit": 10,
+      "attempted_count": 10,
+      "discovered_count": 10,
+      "inserted_count": 10,
+      "updated_count": 0,
+      "failed_count": 0,
+      "partial_count": 0,
+      "status": "ok",
+      "source_mode": "html",
+      "started_at": "2026-11-17T13:53:47+00:00",
+      "finished_at": "2026-11-17T13:54:03+00:00",
+      "errors": []
+    },
+    {
+      "run_id": "51b23b287dfb488e9f460c1e8af9a01f",
+      "site_id": "xinhua",
+      "channel_id": "world",
+      "requested_limit": 8,
+      "attempted_count": 8,
+      "discovered_count": 8,
+      "inserted_count": 8,
+      "updated_count": 0,
+      "failed_count": 0,
+      "partial_count": 0,
+      "status": "ok",
+      "source_mode": "html",
+      "started_at": "2026-11-17T13:53:34+00:00",
+      "finished_at": "2026-11-17T13:53:47+00:00",
+      "errors": []
+    },
+    {
+      "run_id": "1a48ec4f8bd646ec845d239b0327c12f",
+      "site_id": "xinhua",
+      "channel_id": "politics",
+      "requested_limit": 12,
+      "attempted_count": 12,
+      "discovered_count": 12,
+      "inserted_count": 12,
+      "updated_count": 0,
+      "failed_count": 0,
+      "partial_count": 1,
+      "status": "partial",
+      "source_mode": "html",
+      "started_at": "2026-11-17T13:53:15+00:00",
+      "finished_at": "2026-11-17T13:53:34+00:00",
+      "errors": [
+        {
+          "url": "https://www.news.cn/politics/20261117/ca1bb9013a0c438ab5b1a8b212348933/c.html",
+          "code": "PARTIAL_EXTRACTION",
+          "message": "正文过短（21 字符，阈值 80）",
+          "http_status": 200
+        }
+      ]
+    }
+  ]
+}

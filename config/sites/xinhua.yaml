@@ -1,0 +1,125 @@
+site_id: xinhua
+name: 新华网
+homepage: https://www.news.cn/
+enabled: true
+timezone: Asia/Shanghai
+allowed_domains:
+  - news.cn
+  - xinhuanet.com
+host_aliases:
+  news.cn: www.news.cn
+  xinhuanet.com: www.news.cn
+  www.xinhuanet.com: www.news.cn
+article_url_patterns:
+  - '^https://(?:www\.)?(?:news\.cn|xinhuanet\.com)/(?:politics|world|fortune|tech|culture|sports)/20\d{6}/[0-9a-f]{32}/c\.html$'
+request_delay_seconds: 1.5
+timeout_seconds: 25
+max_redirects: 3
+respect_robots: true
+robots_failure_policy: closed
+discovery_note: >-
+  2026-11-17 实测：官方 RSS https://www.news.cn/politics/news_politics.xml
+  返回 200 且包含 300 条条目，但最新条目为 2022-12-14，已过期；
+  因此本配置不使用 RSS，而使用栏目 HTML 页面发现当前文章。
+channels:
+  - id: politics
+    name: 时政
+    url: https://www.news.cn/politics/
+    discovery:
+      - type: html
+        url: https://www.news.cn/politics/
+        link_selector: "a[href]"
+        url_pattern: '^/(?:politics|world|fortune|tech|culture|sports)/20\d{6}/[0-9a-f]{32}/c\.html$'
+        same_channel_path: true
+  - id: world
+    name: 国际
+    url: https://www.news.cn/world/
+    discovery:
+      - type: html
+        url: https://www.news.cn/world/
+        link_selector: "a[href]"
+        url_pattern: '^/(?:politics|world|fortune|tech|culture|sports)/20\d{6}/[0-9a-f]{32}/c\.html$'
+        same_channel_path: true
+  - id: fortune
+    name: 财经
+    url: https://www.news.cn/fortune/index.htm
+    discovery:
+      - type: html
+        url: https://www.news.cn/fortune/index.htm
+        link_selector: "a[href]"
+        url_pattern: '^/(?:politics|world|fortune|tech|culture|sports)/20\d{6}/[0-9a-f]{32}/c\.html$'
+        same_channel_path: true
+  - id: tech
+    name: 科技
+    url: https://www.news.cn/tech/
+    discovery:
+      - type: html
+        url: https://www.news.cn/tech/
+        link_selector: "a[href]"
+        url_pattern: '^/(?:politics|world|fortune|tech|culture|sports)/20\d{6}/[0-9a-f]{32}/c\.html$'
+        same_channel_path: true
+  - id: culture
+    name: 文化
+    url: https://www.news.cn/culture/
+    discovery:
+      - type: html
+        url: https://www.news.cn/culture/
+        link_selector: "a[href]"
+        url_pattern: '^/(?:politics|world|fortune|tech|culture|sports)/20\d{6}/[0-9a-f]{32}/c\.html$'
+        same_channel_path: true
+  - id: sports
+    name: 体育
+    url: https://www.news.cn/sports/
+    discovery:
+      - type: html
+        url: https://www.news.cn/sports/
+        link_selector: "a[href]"
+        url_pattern: '^/(?:politics|world|fortune|tech|culture|sports)/20\d{6}/[0-9a-f]{32}/c\.html$'
+        same_channel_path: true
+article:
+  title_selectors:
+    - "h1 .title"
+    - "h1"
+  published_at_selectors:
+    - ".info"
+    - ".header-time .time"
+    - ".header-time"
+  date_meta_names:
+    - publishdate
+    - pubdate
+  datetime_regex: '(20\d{2}[-/]\d{1,2}[-/]\d{1,2}(?:\s+\d{1,2}:\d{2}(?::\d{2})?)?)'
+  source_selectors:
+    - ".source"
+  author_selectors:
+    - ".author"
+  summary_meta_names:
+    - description
+    - og:description
+  content_selectors:
+    - "#detailContent"
+    - "#detail"
+  paragraph_selector: p
+  remove_selectors:
+    - script
+    - style
+    - noscript
+    - iframe
+    - .ad
+    - .advert
+    - .recommend
+    - .related
+    - .share
+    - .qrcode
+    - .editor
+    - .copyright
+    - .pageShare
+  strip_title_suffixes:
+    - "-新华网"
+    - "_新华网"
+    - "—新华网"
+  min_content_chars: 80
+  allow_generic_content_fallback: false
+validation:
+  sample_articles: 3
+  min_ok_articles: 1
+  max_channels: 6

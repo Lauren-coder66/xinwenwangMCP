@@ -1,0 +1,47 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\n  \"ok\": true,\n  \"status\": \"ok\",\n  \"sites\": [\n    {\n      \"site_id\": \"chinanews\",\n      \"name\": \"中国新闻网\",\n      \"homepage\": \"https://www.chinanews.com.cn/\",\n      \"enabled\": true,\n      \"timezone\": \"Asia/Shanghai\",\n      \"status\": \"active\",\n      \"validated_at\": \"2026-11-17T13:58:03+00:00\",\n      \"channels_total\": 1,\n      \"channels_valid\": 1,\n      \"articles\": 10,\n      \"last_refresh_at\": \"2026-11-17T13:54:03+00:00\",\n      \"config_hash\": \"a8f49422a796570746f01a6caa1a0697891d9d8a3d38e0a62585fab0f37b50c7\",\n      \"config_error\": null\n    },\n    {\n      \"site_id\": \"xinhua\",\n      \"name\": \"新华网\",\n      \"homepage\": \"https://www.news.cn/\",\n      \"enabled\": true,\n      \"timezone\": \"Asia/Shanghai\",\n      \"status\": \"active\",\n      \"validated_at\": \"2026-11-17T13:53:08+00:00\",\n      \"channels_total\": 6,\n      \"channels_valid\": 6,\n      \"articles\": 22,\n      \"last_refresh_at\": \"2026-11-17T14:01:48+00:00\",\n      \"config_hash\": \"c183dfc7a891e32de1d404a6abea082cd6c70535e9d2e181c547035e26087fcc\",\n      \"config_error\": null\n    }\n  ],\n  \"config_errors\": [],\n  \"default_site\": \"xinhua\"\n}"
+    }
+  ],
+  "structuredContent": {
+    "ok": true,
+    "status": "ok",
+    "sites": [
+      {
+        "site_id": "chinanews",
+        "name": "中国新闻网",
+        "homepage": "https://www.chinanews.com.cn/",
+        "enabled": true,
+        "timezone": "Asia/Shanghai",
+        "status": "active",
+        "validated_at": "2026-11-17T13:58:03+00:00",
+        "channels_total": 1,
+        "channels_valid": 1,
+        "articles": 10,
+        "last_refresh_at": "2026-11-17T13:54:03+00:00",
+        "config_hash": "a8f49422a796570746f01a6caa1a0697891d9d8a3d38e0a62585fab0f37b50c7",
+        "config_error": null
+      },
+      {
+        "site_id": "xinhua",
+        "name": "新华网",
+        "homepage": "https://www.news.cn/",
+        "enabled": true,
+        "timezone": "Asia/Shanghai",
+        "status": "active",
+        "validated_at": "2026-11-17T13:53:08+00:00",
+        "channels_total": 6,
+        "channels_valid": 6,
+        "articles": 22,
+        "last_refresh_at": "2026-11-17T14:01:48+00:00",
+        "config_hash": "c183dfc7a891e32de1d404a6abea082cd6c70535e9d2e181c547035e26087fcc",
+        "config_error": null
+      }
+    ],
+    "config_errors": [],
+    "default_site": "xinhua"
+  },
+  "isError": false
+}

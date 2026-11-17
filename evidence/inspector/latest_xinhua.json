@@ -1,0 +1,74 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\n  \"ok\": true,\n  \"status\": \"ok\",\n  \"data_status\": \"local_cache_only\",\n  \"data_source\": \"local_sqlite_cache\",\n  \"scope\": \"local_collected_articles_only\",\n  \"site_id\": \"xinhua\",\n  \"channel\": \"politics\",\n  \"articles\": [\n    {\n      \"site_id\": \"xinhua\",\n      \"site_name\": \"新华网\",\n      \"channel\": \"politics\",\n      \"channel_name\": \"时政\",\n      \"title\": \"新华社权威快报丨我国将逐步实现疫苗处方全覆盖\",\n      \"url\": \"https://www.news.cn/politics/20261117/3f1e8a88dbcb46df9ea455ffb5e144d9/c.html\",\n      \"published_at\": \"2026-11-17T06:41:40+00:00\",\n      \"published_at_local\": \"2026-11-17T14:41:40+08:00\",\n      \"published_date\": \"2026-11-17\",\n      \"source\": \"新华社\",\n      \"fetched_at\": \"2026-11-17T13:54:47+00:00\",\n      \"extraction_status\": \"ok\",\n      \"content_chars\": 365,\n      \"data_status\": \"cached\",\n      \"cache_age_seconds\": 119\n    },\n    {\n      \"site_id\": \"xinhua\",\n      \"site_name\": \"新华网\",\n      \"channel\": \"politics\",\n      \"channel_name\": \"时政\",\n      \"title\": \"新华社消息丨我国北斗终端设备应用数量近4200万\",\n      \"url\": \"https://www.news.cn/politics/20261117/ca1bb9013a0c438ab5b1a8b212348933/c.html\",\n      \"published_at\": \"2026-11-17T03:04:48+00:00\",\n      \"published_at_local\": \"2026-11-17T11:04:48+08:00\",\n      \"published_date\": \"2026-11-17\",\n      \"source\": \"新华网\",\n      \"fetched_at\": \"2026-11-17T13:54:06+00:00\",\n      \"extraction_status\": \"partial\",\n      \"content_chars\": 21,\n      \"data_status\": \"cached\",\n      \"cache_age_seconds\": 160\n    },\n    {\n      \"site_id\": \"xinhua\",\n      \"site_name\": \"新华网\",\n      \"channel\": \"politics\",\n      \"channel_name\": \"时政\",\n      \"title\": \"医保钱包代缴居民医保费统筹地区范围不断扩大\",\n      \"url\": \"https://www.news.cn/politics/20261117/042b31d8108b4658be9777ad2f761c5e/c.html\",\n      \"published_at\": \"2026-11-17T00:02:10+00:00\",\n      \"published_at_local\": \"2026-11-17T08:02:10+08:00\",\n      \"published_date\": \"2026-11-17\",\n      \"source\": \"新华网\",\n      \"fetched_at\": \"2026-11-17T13:54:49+00:00\",\n      \"extraction_status\": \"ok\",\n      \"content_chars\": 295,\n      \"data_status\": \"cached\",\n      \"cache_age_seconds\": 117\n    }\n  ],\n  \"count\": 3,\n  \"refresh\": null,\n  \"note\": \"data_status=local_cache_only 表示本次未联网；live_refresh_completed 表示本次先执行了真实采集，但返回条目仍来自本地数据库。\"\n}"
+    }
+  ],
+  "structuredContent": {
+    "ok": true,
+    "status": "ok",
+    "data_status": "local_cache_only",
+    "data_source": "local_sqlite_cache",
+    "scope": "local_collected_articles_only",
+    "site_id": "xinhua",
+    "channel": "politics",
+    "articles": [
+      {
+        "site_id": "xinhua",
+        "site_name": "新华网",
+        "channel": "politics",
+        "channel_name": "时政",
+        "title": "新华社权威快报丨我国将逐步实现疫苗处方全覆盖",
+        "url": "https://www.news.cn/politics/20261117/3f1e8a88dbcb46df9ea455ffb5e144d9/c.html",
+        "published_at": "2026-11-17T06:41:40+00:00",
+        "published_at_local": "2026-11-17T14:41:40+08:00",
+        "published_date": "2026-11-17",
+        "source": "新华社",
+        "fetched_at": "2026-11-17T13:54:47+00:00",
+        "extraction_status": "ok",
+        "content_chars": 365,
+        "data_status": "cached",
+        "cache_age_seconds": 119
+      },
+      {
+        "site_id": "xinhua",
+        "site_name": "新华网",
+        "channel": "politics",
+        "channel_name": "时政",
+        "title": "新华社消息丨我国北斗终端设备应用数量近4200万",
+        "url": "https://www.news.cn/politics/20261117/ca1bb9013a0c438ab5b1a8b212348933/c.html",
+        "published_at": "2026-11-17T03:04:48+00:00",
+        "published_at_local": "2026-11-17T11:04:48+08:00",
+        "published_date": "2026-11-17",
+        "source": "新华网",
+        "fetched_at": "2026-11-17T13:54:06+00:00",
+        "extraction_status": "partial",
+        "content_chars": 21,
+        "data_status": "cached",
+        "cache_age_seconds": 160
+      },
+      {
+        "site_id": "xinhua",
+        "site_name": "新华网",
+        "channel": "politics",
+        "channel_name": "时政",
+        "title": "医保钱包代缴居民医保费统筹地区范围不断扩大",
+        "url": "https://www.news.cn/politics/20261117/042b31d8108b4658be9777ad2f761c5e/c.html",
+        "published_at": "2026-11-17T00:02:10+00:00",
+        "published_at_local": "2026-11-17T08:02:10+08:00",
+        "published_date": "2026-11-17",
+        "source": "新华网",
+        "fetched_at": "2026-11-17T13:54:49+00:00",
+        "extraction_status": "ok",
+        "content_chars": 295,
+        "data_status": "cached",
+        "cache_age_seconds": 117
+      }
+    ],
+    "count": 3,
+    "refresh": null,
+    "note": "data_status=local_cache_only 表示本次未联网；live_refresh_completed 表示本次先执行了真实采集，但返回条目仍来自本地数据库。"
+  },
+  "isError": false
+}

@@ -1,0 +1,221 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\n  \"ok\": true,\n  \"status\": \"candidate\",\n  \"validated\": false,\n  \"candidate_ready\": true,\n  \"url\": \"https://www.chinanews.com.cn/scroll-news/news1.html\",\n  \"final_url\": \"https://www.chinanews.com.cn/scroll-news/news1.html\",\n  \"site_name\": \"滚动新闻\",\n  \"page_title\": \"滚动新闻-中国新闻网-梳理天下新闻\",\n  \"checks\": [\n    {\n      \"name\": \"fetch\",\n      \"ok\": true,\n      \"detail\": \"HTTP 200, 83534 字符\",\n      \"evidence\": {\n        \"final_url\": \"https://www.chinanews.com.cn/scroll-news/news1.html\",\n        \"content_type\": \"text/html\",\n        \"elapsed_ms\": 4030\n      }\n    },\n    {\n      \"name\": \"robots\",\n      \"ok\": true,\n      \"detail\": \"robots.txt 可访问\",\n      \"evidence\": {\n        \"url\": \"https://www.chinanews.com.cn/robots.txt\",\n        \"http_status\": 200,\n        \"disallow_rules\": [\n          \"Disallow: /AboutUs/Staff/\",\n          \"Disallow: /part/\",\n          \"Disallow: /iframe/\",\n          \"Disallow: /test\",\n          \"Disallow: /ceshi/\",\n          \"Disallow: /ad/\",\n          \"Disallow: /ad2008/\",\n          \"Disallow: /jingwei/\",\n          \"Disallow: /html/jw/\",\n          \"Disallow: /sc.html\",\n          \"Disallow: /znh.html\",\n          \"Disallow: /hg.html\",\n          \"Disallow: /jr.html\",\n          \"Disallow: /zq.html\",\n          \"Disallow: /lc.html\",\n          \"Disallow: /zb/index.html\",\n          \"Disallow: /sj.html\",\n          \"Disallow: /fc.html\",\n          \"Disallow: /kj.html\",\n          \"Disallow: /qc.html\"\n        ],\n        \"preview\": \"User-agent: *\\r\\nAllow: /\\r\\nSitemap:http://www.chinanews.com/sitemap.xml\\r\\nDisallow: /AboutUs/Staff/\\r\\nDisallow: /part/\\r\\nDisallow: /iframe/\\r\\nDisallow: /test\\r\\nDisallow: /ceshi/\\r\\nDisallow: /ad/\\r\\nDisallow: /ad2008/\\r\\nDisallow: /jingwei/\\r\\nDisallow: /html/jw/\\r\\nDisallow: /sc.html\\r\\nDisallow: /znh.html\\r\\nDisallow: /hg.html\\r\\nDisallow: /jr.html\\r\\nDisallow: /zq.html\\r\\nDisallow: /lc.html\\r\\nDisallow: /zb/index.html\\r\\nDisallow: /sj.html\\r\\nDisallow: /fc.html\\r\\nDisallow: /kj.html\\r\\nDisallow: /qc.html\\r\\nDisallow: /jwmj.html\\r\\nDisallow: /original.html\\r\\nDisallow: /renwen.html\\r\\nDisallow: /rw.html\\r\\nDisallow: /wc.html\\r\\nDisallow: /kb.html\\r\\nDisallow: /jw/\\r\\nDisallow: /jingwei.html\\r\\nDisallow: /code/\\r\\nDisallow: /m/code/\\r\\nDisallow: /34/2017/\\r\\nDisallow: /34/2018/\\r\\nDisallow: /34/2019/\\r\\nDisallow: /upload_pic/\\r\\nDisallow: /ztlm/37/\\r\\nDisallow: /m/px/46/\\r\\nDisallow: /px/46/\\r\\nDisallow: /history/\\r\\n\\n\"\n      }\n    },\n    {\n      \"name\": \"article_links\",\n      \"ok\": true,\n      \"detail\": \"识别出 20 个文章链接候选\",\n      \"evidence\": [\n        \"https://www.chinanews.com.cn/cj/2026/11-16/10733120.shtml\",\n        \"https://www.chinanews.com.cn/cj/2026/11-16/10733148.shtml\",\n        \"https://www.chinanews.com.cn/cj/2026/11-17/10733675.shtml\",\n        \"https://www.chinanews.com.cn/cj/2026/11-17/10733677.shtml\",\n        \"https://www.chinanews.com.cn/cj/2026/11-17/10733678.shtml\",\n        \"https://www.chinanews.com.cn/cj/2026/11-17/10733682.shtml\",\n        \"https://www.chinanews.com.cn/cj/2026/11-17/10733689.shtml\",\n        \"https://www.chinanews.com.cn/cj/2026/11-17/10733694.shtml\",\n        \"https://www.chinanews.com.cn/cj/2026/11-17/10733706.shtml\",\n        \"https://www.chinanews.com.cn/cj/2026/11-17/10733708.shtml\"\n      ]\n    }\n  ],\n  \"rss\": {\n    \"candidates\": [],\n    \"tested\": [\n      {\n        \"url\": \"https://www.chinanews.com.cn/rss.xml\",\n        \"source\": \"common_path\",\n        \"http_status\": 404,\n        \"error\": \"HTTP 404\"\n      },\n      {\n        \"url\": \"https://www.chinanews.com.cn/feed\",\n        \"source\": \"common_path\",\n        \"http_status\": 404,\n        \"error\": \"HTTP 404\"\n      },\n      {\n        \"url\": \"https://www.chinanews.com.cn/index.xml\",\n        \"source\": \"common_path\",\n        \"http_status\": 404,\n        \"error\": \"HTTP 404\"\n      }\n    ],\n    \"latest\": null,\n    \"usable_recent\": null\n  },\n  \"sitemap\": {\n    \"candidates\": [],\n    \"tested\": [\n      {\n        \"url\": \"http://www.chinanews.com/sitemap.xml\",\n        \"http_status\": null,\n        \"error\": \"域名不在白名单: www.chinanews.com\"\n      }\n    ]\n  },\n  \"links\": [\n    \"https://www.chinanews.com.cn/cj/2026/11-16/10733120.shtml\",\n    \"https://www.chinanews.com.cn/cj/2026/11-16/10733148.shtml\",\n    \"https://www.chinanews.com.cn/cj/2026/11-17/10733675.shtml\",\n    \"https://www.chinanews.com.cn/cj/2026/11-17/10733677.shtml\",\n    \"https://www.chinanews.com.cn/cj/2026/11-17/10733678.shtml\",\n    \"https://www.chinanews.com.cn/cj/2026/11-17/10733682.shtml\",\n    \"https://www.chinanews.com.cn/cj/2026/11-17/10733689.shtml\",\n    \"https://www.chinanews.com.cn/cj/2026/11-17/10733694.shtml\",\n    \"https://www.chinanews.com.cn/cj/2026/11-17/10733706.shtml\",\n    \"https://www.chinanews.com.cn/cj/2026/11-17/10733708.shtml\"\n  ],\n  \"samples\": [\n    {\n      \"url\": \"https://www.chinanews.com.cn/cj/2026/11-16/10733120.shtml\",\n      \"http_status\": 200,\n      \"fetch_error\": null,\n      \"final_url\": \"https://www.chinanews.com.cn/cj/2026/11-16/10733120.shtml\",\n      \"title\": \"北京大学张海滨：中国日益成为全球气候治理引领者\",\n      \"title_selector\": \"h1\",\n      \"date_raw\": \"2026年11月16日 22:07\",\n      \"date_selector\": \".content_left_time\",\n      \"content_selector\": \".left_zw\",\n      \"content_preview\": \"中新网\\n土耳其安塔利亚11月16日电 (记者 魏园 陈溯)《联合国气候变化框架公约》第三十一次缔约方大会(COP31)正在土耳其安塔利亚举行。北京大学碳中和研究院副院长、北大博雅特聘教授、国家气候变化专家委员会委员张海滨在大会期间表示，中国正日益成为全球气候治理中积极而重要的参与者、贡献者和引领者，在国内引领可再生能源转型的同时，积极推动面向全球南方的国际合作，并将持续为世界提供更多全球公共产品。\",\n      \"content_chars\": 714,\n      \"published_at\": \"2026-11-16T14:07:00+00:00\",\n      \"published_at_local\": \"2026-11-16T22:07:00+08:00\"\n    },\n    {\n      \"url\": \"https://www.chinanews.com.cn/cj/2026/11-16/10733148.shtml\",\n      \"http_status\": 200,\n      \"fetch_error\": null,\n      \"final_url\": \"https://www.chinanews.com.cn/cj/2026/11-16/10733148.shtml\",\n      \"title\": \"（深圳APEC）AI上APEC：从共识到场景 企业出海赋能亚太数智协作生态\",\n      \"title_selector\": \"h1\",\n      \"date_raw\": \"2026年11月16日 22:59\",\n      \"date_selector\": \".content_left_time\",\n      \"content_selector\": \".left_zw\",\n      \"content_preview\": \"中新社\\n深圳11月16日电 题：AI上APEC：从共识到场景  企业出海赋能亚太数智协作生态\\n中新社\\n记者 郭军\\n走进深圳河套深港科技创新合作区，晶泰科技自动化实验室内物料转运机器人有序穿梭，“灵动勺”精准起落，将固体试剂加样误差控制在0.3毫克，破解生物医药实验室长期依赖人工加样的行业痛点。\\n据该企业副总裁何咪介绍，这套“AI+机器人”一体化智能研发平台，已和全球前二十大药企中的17家达成合作。\",\n      \"content_chars\": 1165,\n      \"published_at\": \"2026-11-16T14:59:00+00:00\",\n      \"published_at_local\": \"2026-11-16T22:59:00+08:00\"\n    },\n    {\n      \"url\": \"https://www.chinanews.com.cn/cj/2026/11-17/10733675.shtml\",\n      \"http_status\": 200,\n      \"fetch_error\": null,\n      \"final_url\": \"https://www.chinanews.com.cn/cj/2026/11-17/10733675.shtml\",\n      \"title\": \"河北武安培育特色产业 咖啡香飘钢铁重镇\",\n      \"title_selector\": \"h1\",\n      \"date_raw\": \"2026年11月17日 20:08\",\n      \"date_selector\": \".content_left_time\",\n      \"content_selector\": \".left_zw\",\n      \"content_preview\": \"中新网\\n邯郸11月17日电 题：河北武安培育特色产业 咖啡香飘钢铁重镇\\n作者 李玉素 张艺姣\\n日前，走进河北省武安市武安斯达普食品有限公司(以下统称“OONE咖啡工厂”)1800平方米的生豆恒温仓库，来自巴西、埃塞俄比亚、哥伦比亚等10余个咖啡产区的100多种生豆按产区码放。仓库外，河北武安保税物流中心的货车刚卸完一批新到的生豆——从产区到进仓，这批豆子在“家门口”完成了通关。\\n据了解，2018年\",\n      \"content_chars\": 1168,\n      \"published_at\": \"2026-11-17T12:08:00+00:00\",\n      \"published_at_local\": \"2026-11-17T20:08:00+08:00\"\n    },\n    {\n      \"url\": \"https://www.chinanews.com.cn/cj/2026/11-17/10733677.shtml\",\n      \"http_status\": 200,\n      \"fetch_error\": null,\n      \"final_url\": \"https://www.chinanews.com.cn/cj/2026/11-17/10733677.shtml\",\n      \"title\": \"大商所就苯乙烯、乙二醇月均价期货合约及相关规则公开征求意见\",\n      \"title_selector\": \"h1\",\n      \"date_raw\": \"2026年11月17日 20:05\",\n      \"date_selector\": \".content_left_time\",\n      \"content_selector\": \".left_zw\",\n      \"content_preview\": \"中新网\\n大连11月17日电 (记者 杨毅)大连商品交易所(下称“大商所”)17日发布公告，就苯乙烯、乙二醇月均价期货合约及相关规则公开征求市场意见。\\n据了解，月均价期货是一种以一个月内标的资产平均价格为结算依据的期货合约。2025年10月，大商所上市国内首批塑料月均价期货，在现金交割领域实现了突破，初步探索了月均价期货的运行特点。上市一年来，三个塑料月均价期货运行平稳，实现了“稳起步”目标。\\n在此\",\n      \"content_chars\": 687,\n      \"published_at\": \"2026-11-17T12:05:00+00:00\",\n      \"published_at_local\": \"2026-11-17T20:05:00+08:00\"\n    },\n    {\n      \"url\": \"https://www.chinanews.com.cn/cj/2026/11-17/10733678.shtml\",\n      \"http_status\": 200,\n      \"fetch_error\": null,\n      \"final_url\": \"https://www.chinanews.com.cn/cj/2026/11-17/10733678.shtml\",\n      \"title\": \"浙南首座LNG液体公用型保税仓库正式进入实质运营阶段\",\n      \"title_selector\": \"h1\",\n      \"date_raw\": \"2026年11月17日 20:07\",\n      \"date_selector\": \".content_left_time\",\n      \"content_selector\": \".left_zw\",\n      \"content_preview\": \"中新网\\n温州11月17日电(周健 何琰 陈炯)11月16日至11月17日，一批来自澳大利亚、货值近2.3亿元的液化天然气运抵浙江浙能温州液化天然气有限公司液体公用型保税仓库并完成入库，成为该保税仓库通过验收后迎来的首票货物。这标志着浙南首座LNG液体公用型保税仓库正式进入实质运营阶段。\\n越过东海岛礁，洞头小门岛海岸边，巨型储罐巍然矗立，码头栈桥向海面延伸。这里虽没有海岛景区的游人如织景象，却昼夜不\",\n      \"content_chars\": 1084,\n      \"published_at\": \"2026-11-17T12:07:00+00:00\",\n      \"published_at_local\": \"2026-11-17T20:07:00+08:00\"\n    }\n  ],\n  \"suggested_selectors\": {\n    \"title\": [\n      \"h1\"\n    ],\n    \"published_at\": [\n      \".content_left_time\"\n    ],\n    \"content\": [\n      \".left_zw\"\n    ]\n  },\n  \"candidate_config_yaml\": \"# CANDIDATE ONLY - generated by inspect_site.\\n# Not validated. Review selectors, set enabled: true, then run validate_site.\\nsite_id: chinanews_com_cn\\nname: 滚动新闻\\nhomepage: https://www.chinanews.com.cn/\\nenabled: false\\ntimezone: Asia/Shanghai\\nallowed_domains:\\n- www.chinanews.com.cn\\n- chinanews.com.cn\\narticle_url_patterns:\\n- ^https?://(?:www\\\\.)?chinanews\\\\.com\\\\.cn/.*(?:\\\\.shtml)$\\nrequest_delay_seconds: 1.5\\nrespect_robots: true\\nchannels:\\n- id: main\\n  name: 滚动新闻\\n  url: https://www.chinanews.com.cn/scroll-news/news1.html\\n  discovery:\\n  - type: html\\n    url: https://www.chinanews.com.cn/scroll-news/news1.html\\n    url_pattern: ^https?://(?:www\\\\.)?chinanews\\\\.com\\\\.cn/.*(?:\\\\.shtml)$\\narticle:\\n  title_selectors:\\n  - h1\\n  published_at_selectors:\\n  - .content_left_time\\n  content_selectors:\\n  - .left_zw\\n  min_content_chars: 80\\n\",\n  \"warnings\": [\n    \"未发现可访问的 RSS/Atom 订阅源。\"\n  ],\n  \"next_step\": \"将 candidate_config_yaml 保存为 config/sites/<site_id>.yaml，然后运行 python -m news_mcp.cli validate --site <site_id>；validate_site 通过后才会出现在 list_channels 中。\",\n  \"inspected_at\": \"2026-11-17T14:05:15+00:00\"\n}"
+    }
+  ],
+  "structuredContent": {
+    "ok": true,
+    "status": "candidate",
+    "validated": false,
+    "candidate_ready": true,
+    "url": "https://www.chinanews.com.cn/scroll-news/news1.html",
+    "final_url": "https://www.chinanews.com.cn/scroll-news/news1.html",
+    "site_name": "滚动新闻",
+    "page_title": "滚动新闻-中国新闻网-梳理天下新闻",
+    "checks": [
+      {
+        "name": "fetch",
+        "ok": true,
+        "detail": "HTTP 200, 83534 字符",
+        "evidence": {
+          "final_url": "https://www.chinanews.com.cn/scroll-news/news1.html",
+          "content_type": "text/html",
+          "elapsed_ms": 4030
+        }
+      },
+      {
+        "name": "robots",
+        "ok": true,
+        "detail": "robots.txt 可访问",
+        "evidence": {
+          "url": "https://www.chinanews.com.cn/robots.txt",
+          "http_status": 200,
+          "disallow_rules": [
+            "Disallow: /AboutUs/Staff/",
+            "Disallow: /part/",
+            "Disallow: /iframe/",
+            "Disallow: /test",
+            "Disallow: /ceshi/",
+            "Disallow: /ad/",
+            "Disallow: /ad2008/",
+            "Disallow: /jingwei/",
+            "Disallow: /html/jw/",
+            "Disallow: /sc.html",
+            "Disallow: /znh.html",
+            "Disallow: /hg.html",
+            "Disallow: /jr.html",
+            "Disallow: /zq.html",
+            "Disallow: /lc.html",
+            "Disallow: /zb/index.html",
+            "Disallow: /sj.html",
+            "Disallow: /fc.html",
+            "Disallow: /kj.html",
+            "Disallow: /qc.html"
+          ],
+          "preview": "User-agent: *\r\nAllow: /\r\nSitemap:http://www.chinanews.com/sitemap.xml\r\nDisallow: /AboutUs/Staff/\r\nDisallow: /part/\r\nDisallow: /iframe/\r\nDisallow: /test\r\nDisallow: /ceshi/\r\nDisallow: /ad/\r\nDisallow: /ad2008/\r\nDisallow: /jingwei/\r\nDisallow: /html/jw/\r\nDisallow: /sc.html\r\nDisallow: /znh.html\r\nDisallow: /hg.html\r\nDisallow: /jr.html\r\nDisallow: /zq.html\r\nDisallow: /lc.html\r\nDisallow: /zb/index.html\r\nDisallow: /sj.html\r\nDisallow: /fc.html\r\nDisallow: /kj.html\r\nDisallow: /qc.html\r\nDisallow: /jwmj.html\r\nDisallow: /original.html\r\nDisallow: /renwen.html\r\nDisallow: /rw.html\r\nDisallow: /wc.html\r\nDisallow: /kb.html\r\nDisallow: /jw/\r\nDisallow: /jingwei.html\r\nDisallow: /code/\r\nDisallow: /m/code/\r\nDisallow: /34/2017/\r\nDisallow: /34/2018/\r\nDisallow: /34/2019/\r\nDisallow: /upload_pic/\r\nDisallow: /ztlm/37/\r\nDisallow: /m/px/46/\r\nDisallow: /px/46/\r\nDisallow: /history/\r\n\n"
+        }
+      },
+      {
+        "name": "article_links",
+        "ok": true,
+        "detail": "识别出 20 个文章链接候选",
+        "evidence": [
+          "https://www.chinanews.com.cn/cj/2026/11-16/10733120.shtml",
+          "https://www.chinanews.com.cn/cj/2026/11-16/10733148.shtml",
+          "https://www.chinanews.com.cn/cj/2026/11-17/10733675.shtml",
+          "https://www.chinanews.com.cn/cj/2026/11-17/10733677.shtml",
+          "https://www.chinanews.com.cn/cj/2026/11-17/10733678.shtml",
+          "https://www.chinanews.com.cn/cj/2026/11-17/10733682.shtml",
+          "https://www.chinanews.com.cn/cj/2026/11-17/10733689.shtml",
+          "https://www.chinanews.com.cn/cj/2026/11-17/10733694.shtml",
+          "https://www.chinanews.com.cn/cj/2026/11-17/10733706.shtml",
+          "https://www.chinanews.com.cn/cj/2026/11-17/10733708.shtml"
+        ]
+      }
+    ],
+    "rss": {
+      "candidates": [],
+      "tested": [
+        {
+          "url": "https://www.chinanews.com.cn/rss.xml",
+          "source": "common_path",
+          "http_status": 404,
+          "error": "HTTP 404"
+        },
+        {
+          "url": "https://www.chinanews.com.cn/feed",
+          "source": "common_path",
+          "http_status": 404,
+          "error": "HTTP 404"
+        },
+        {
+          "url": "https://www.chinanews.com.cn/index.xml",
+          "source": "common_path",
+          "http_status": 404,
+          "error": "HTTP 404"
+        }
+      ],
+      "latest": null,
+      "usable_recent": null
+    },
+    "sitemap": {
+      "candidates": [],
+      "tested": [
+        {
+          "url": "http://www.chinanews.com/sitemap.xml",
+          "http_status": null,
+          "error": "域名不在白名单: www.chinanews.com"
+        }
+      ]
+    },
+    "links": [
+      "https://www.chinanews.com.cn/cj/2026/11-16/10733120.shtml",
+      "https://www.chinanews.com.cn/cj/2026/11-16/10733148.shtml",
+      "https://www.chinanews.com.cn/cj/2026/11-17/10733675.shtml",
+      "https://www.chinanews.com.cn/cj/2026/11-17/10733677.shtml",
+      "https://www.chinanews.com.cn/cj/2026/11-17/10733678.shtml",
+      "https://www.chinanews.com.cn/cj/2026/11-17/10733682.shtml",
+      "https://www.chinanews.com.cn/cj/2026/11-17/10733689.shtml",
+      "https://www.chinanews.com.cn/cj/2026/11-17/10733694.shtml",
+      "https://www.chinanews.com.cn/cj/2026/11-17/10733706.shtml",
+      "https://www.chinanews.com.cn/cj/2026/11-17/10733708.shtml"
+    ],
+    "samples": [
+      {
+        "url": "https://www.chinanews.com.cn/cj/2026/11-16/10733120.shtml",
+        "http_status": 200,
+        "fetch_error": null,
+        "final_url": "https://www.chinanews.com.cn/cj/2026/11-16/10733120.shtml",
+        "title": "北京大学张海滨：中国日益成为全球气候治理引领者",
+        "title_selector": "h1",
+        "date_raw": "2026年11月16日 22:07",
+        "date_selector": ".content_left_time",
+        "content_selector": ".left_zw",
+        "content_preview": "中新网\n土耳其安塔利亚11月16日电 (记者 魏园 陈溯)《联合国气候变化框架公约》第三十一次缔约方大会(COP31)正在土耳其安塔利亚举行。北京大学碳中和研究院副院长、北大博雅特聘教授、国家气候变化专家委员会委员张海滨在大会期间表示，中国正日益成为全球气候治理中积极而重要的参与者、贡献者和引领者，在国内引领可再生能源转型的同时，积极推动面向全球南方的国际合作，并将持续为世界提供更多全球公共产品。",
+        "content_chars": 714,
+        "published_at": "2026-11-16T14:07:00+00:00",
+        "published_at_local": "2026-11-16T22:07:00+08:00"
+      },
+      {
+        "url": "https://www.chinanews.com.cn/cj/2026/11-16/10733148.shtml",
+        "http_status": 200,
+        "fetch_error": null,
+        "final_url": "https://www.chinanews.com.cn/cj/2026/11-16/10733148.shtml",
+        "title": "（深圳APEC）AI上APEC：从共识到场景 企业出海赋能亚太数智协作生态",
+        "title_selector": "h1",
+        "date_raw": "2026年11月16日 22:59",
+        "date_selector": ".content_left_time",
+        "content_selector": ".left_zw",
+        "content_preview": "中新社\n深圳11月16日电 题：AI上APEC：从共识到场景  企业出海赋能亚太数智协作生态\n中新社\n记者 郭军\n走进深圳河套深港科技创新合作区，晶泰科技自动化实验室内物料转运机器人有序穿梭，“灵动勺”精准起落，将固体试剂加样误差控制在0.3毫克，破解生物医药实验室长期依赖人工加样的行业痛点。\n据该企业副总裁何咪介绍，这套“AI+机器人”一体化智能研发平台，已和全球前二十大药企中的17家达成合作。",
+        "content_chars": 1165,
+        "published_at": "2026-11-16T14:59:00+00:00",
+        "published_at_local": "2026-11-16T22:59:00+08:00"
+      },
+      {
+        "url": "https://www.chinanews.com.cn/cj/2026/11-17/10733675.shtml",
+        "http_status": 200,
+        "fetch_error": null,
+        "final_url": "https://www.chinanews.com.cn/cj/2026/11-17/10733675.shtml",
+        "title": "河北武安培育特色产业 咖啡香飘钢铁重镇",
+        "title_selector": "h1",
+        "date_raw": "2026年11月17日 20:08",
+        "date_selector": ".content_left_time",
+        "content_selector": ".left_zw",
+        "content_preview": "中新网\n邯郸11月17日电 题：河北武安培育特色产业 咖啡香飘钢铁重镇\n作者 李玉素 张艺姣\n日前，走进河北省武安市武安斯达普食品有限公司(以下统称“OONE咖啡工厂”)1800平方米的生豆恒温仓库，来自巴西、埃塞俄比亚、哥伦比亚等10余个咖啡产区的100多种生豆按产区码放。仓库外，河北武安保税物流中心的货车刚卸完一批新到的生豆——从产区到进仓，这批豆子在“家门口”完成了通关。\n据了解，2018年",
+        "content_chars": 1168,
+        "published_at": "2026-11-17T12:08:00+00:00",
+        "published_at_local": "2026-11-17T20:08:00+08:00"
+      },
+      {
+        "url": "https://www.chinanews.com.cn/cj/2026/11-17/10733677.shtml",
+        "http_status": 200,
+        "fetch_error": null,
+        "final_url": "https://www.chinanews.com.cn/cj/2026/11-17/10733677.shtml",
+        "title": "大商所就苯乙烯、乙二醇月均价期货合约及相关规则公开征求意见",
+        "title_selector": "h1",
+        "date_raw": "2026年11月17日 20:05",
+        "date_selector": ".content_left_time",
+        "content_selector": ".left_zw",
+        "content_preview": "中新网\n大连11月17日电 (记者 杨毅)大连商品交易所(下称“大商所”)17日发布公告，就苯乙烯、乙二醇月均价期货合约及相关规则公开征求市场意见。\n据了解，月均价期货是一种以一个月内标的资产平均价格为结算依据的期货合约。2025年10月，大商所上市国内首批塑料月均价期货，在现金交割领域实现了突破，初步探索了月均价期货的运行特点。上市一年来，三个塑料月均价期货运行平稳，实现了“稳起步”目标。\n在此",
+        "content_chars": 687,
+        "published_at": "2026-11-17T12:05:00+00:00",
+        "published_at_local": "2026-11-17T20:05:00+08:00"
+      },
+      {
+        "url": "https://www.chinanews.com.cn/cj/2026/11-17/10733678.shtml",
+        "http_status": 200,
+        "fetch_error": null,
+        "final_url": "https://www.chinanews.com.cn/cj/2026/11-17/10733678.shtml",
+        "title": "浙南首座LNG液体公用型保税仓库正式进入实质运营阶段",
+        "title_selector": "h1",
+        "date_raw": "2026年11月17日 20:07",
+        "date_selector": ".content_left_time",
+        "content_selector": ".left_zw",
+        "content_preview": "中新网\n温州11月17日电(周健 何琰 陈炯)11月16日至11月17日，一批来自澳大利亚、货值近2.3亿元的液化天然气运抵浙江浙能温州液化天然气有限公司液体公用型保税仓库并完成入库，成为该保税仓库通过验收后迎来的首票货物。这标志着浙南首座LNG液体公用型保税仓库正式进入实质运营阶段。\n越过东海岛礁，洞头小门岛海岸边，巨型储罐巍然矗立，码头栈桥向海面延伸。这里虽没有海岛景区的游人如织景象，却昼夜不",
+        "content_chars": 1084,
+        "published_at": "2026-11-17T12:07:00+00:00",
+        "published_at_local": "2026-11-17T20:07:00+08:00"
+      }
+    ],
+    "suggested_selectors": {
+      "title": [
+        "h1"
+      ],
+      "published_at": [
+        ".content_left_time"
+      ],
+      "content": [
+        ".left_zw"
+      ]
+    },
+    "candidate_config_yaml": "# CANDIDATE ONLY - generated by inspect_site.\n# Not validated. Review selectors, set enabled: true, then run validate_site.\nsite_id: chinanews_com_cn\nname: 滚动新闻\nhomepage: https://www.chinanews.com.cn/\nenabled: false\ntimezone: Asia/Shanghai\nallowed_domains:\n- www.chinanews.com.cn\n- chinanews.com.cn\narticle_url_patterns:\n- ^https?://(?:www\\.)?chinanews\\.com\\.cn/.*(?:\\.shtml)$\nrequest_delay_seconds: 1.5\nrespect_robots: true\nchannels:\n- id: main\n  name: 滚动新闻\n  url: https://www.chinanews.com.cn/scroll-news/news1.html\n  discovery:\n  - type: html\n    url: https://www.chinanews.com.cn/scroll-news/news1.html\n    url_pattern: ^https?://(?:www\\.)?chinanews\\.com\\.cn/.*(?:\\.shtml)$\narticle:\n  title_selectors:\n  - h1\n  published_at_selectors:\n  - .content_left_time\n  content_selectors:\n  - .left_zw\n  min_content_chars: 80\n",
+    "warnings": [
+      "未发现可访问的 RSS/Atom 订阅源。"
+    ],
+    "next_step": "将 candidate_config_yaml 保存为 config/sites/<site_id>.yaml，然后运行 python -m news_mcp.cli validate --site <site_id>；validate_site 通过后才会出现在 list_channels 中。",
+    "inspected_at": "2026-11-17T14:05:15+00:00"
+  },
+  "isError": false
+}

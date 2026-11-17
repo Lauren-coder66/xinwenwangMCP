@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "news": {
+      "command": "D:\\Desktop\\新华网MCP\\.venv\\Scripts\\python.exe",
+      "args": ["-m", "news_mcp.server"],
+      "cwd": "D:\\Desktop\\新华网MCP",
+      "env": {
+        "NEWS_MCP_DB": "D:\\Desktop\\新华网MCP\\data\\news.db",
+        "NEWS_MCP_CONFIG_DIR": "D:\\Desktop\\新华网MCP\\config",
+        "PYTHONIOENCODING": "utf-8"
+      }
+    }
+  }
+}

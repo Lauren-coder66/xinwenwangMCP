@@ -1,0 +1,54 @@
+{
+  "checked_at": "2026-11-17T14:13:53+00:00",
+  "records": [
+    {
+      "url": "https://www.news.cn/politics/",
+      "status_code": 200,
+      "final_url": "https://www.news.cn/politics/",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 39904,
+      "robots_allow_all": null
+    },
+    {
+      "url": "https://www.xinhuanet.com/politics/",
+      "status_code": 200,
+      "final_url": "https://www.xinhuanet.com/politics/",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 39904,
+      "robots_allow_all": null
+    },
+    {
+      "url": "https://www.news.cn/robots.txt",
+      "status_code": 200,
+      "final_url": "https://www.news.cn/robots.txt",
+      "content_type": "text/plain; charset=utf-8",
+      "bytes": 74,
+      "robots_allow_all": true
+    },
+    {
+      "url": "https://www.xinhuanet.com/robots.txt",
+      "status_code": 200,
+      "final_url": "https://www.xinhuanet.com/robots.txt",
+      "content_type": "text/plain; charset=utf-8",
+      "bytes": 74,
+      "robots_allow_all": true
+    },
+    {
+      "url": "https://www.chinanews.com.cn/scroll-news/news1.html",
+      "status_code": 200,
+      "final_url": "https://www.chinanews.com.cn/scroll-news/news1.html",
+      "content_type": "text/html",
+      "bytes": 93324,
+      "robots_allow_all": null
+    },
+    {
+      "url": "https://www.chinanews.com.cn/robots.txt",
+      "status_code": 200,
+      "final_url": "https://www.chinanews.com.cn/robots.txt",
+      "content_type": "text/plain",
+      "bytes": 858,
+      "robots_allow_all": true
+    }
+  ],
+  "passed": true
+}

@@ -1,0 +1,71 @@
+site_id: chinanews
+name: 中国新闻网
+homepage: https://www.chinanews.com.cn/
+enabled: true
+timezone: Asia/Shanghai
+allowed_domains:
+  - chinanews.com.cn
+host_aliases:
+  chinanews.com.cn: www.chinanews.com.cn
+article_url_patterns:
+  - '^https://(?:www\.)?chinanews\.com\.cn/[a-z]{2,10}/20\d{2}/\d{2}-\d{2}/\d+\.shtml$'
+request_delay_seconds: 1.5
+timeout_seconds: 25
+max_redirects: 3
+respect_robots: true
+robots_failure_policy: closed
+discovery_note: >-
+  2026-11-17 实测：滚动新闻页 https://www.chinanews.com.cn/scroll-news/news1.html
+  可访问，单页含 121 条当日文章链接；文章正文位于 .left_zw，日期位于
+  .content_left_time。该站栏目首页 /gn/ 等返回 403，因此配置只使用滚动新闻页，
+  不尝试绕过 403。robots.txt 允许 /，仅禁止 /part/、/iframe/、/ad/ 等路径。
+channels:
+  - id: latest
+    name: 滚动新闻
+    url: https://www.chinanews.com.cn/scroll-news/news1.html
+    discovery:
+      - type: html
+        url: https://www.chinanews.com.cn/scroll-news/news1.html
+        link_selector: "a[href]"
+        url_pattern: '^/[a-z]{2,10}/20\d{2}/\d{2}-\d{2}/\d+\.shtml$'
+        same_channel_path: false
+article:
+  title_selectors:
+    - "h1"
+  published_at_selectors:
+    - ".content_left_time"
+    - ".time"
+  date_meta_names:
+    - publishdate
+  datetime_regex: '(20\d{2}年\d{1,2}月\d{1,2}日\s+\d{1,2}:\d{2}(?::\d{2})?|20\d{2}-\d{2}-\d{2}\s+\d{1,2}:\d{2}(?::\d{2})?)'
+  source_selectors:
+    - ".source"
+  author_selectors:
+    - ".author"
+  summary_meta_names:
+    - description
+  content_selectors:
+    - ".left_zw"
+  paragraph_selector: p
+  remove_selectors:
+    - script
+    - style
+    - noscript
+    - iframe
+    - .ad
+    - .advert
+    - .recommend
+    - .related
+    - .share
+    - .qrcode
+    - .editor
+    - .copyright
+  strip_title_suffixes:
+    - "-中新网"
+    - "_中新网"
+  min_content_chars: 80
+  allow_generic_content_fallback: false
+validation:
+  sample_articles: 3
+  min_ok_articles: 1
+  max_channels: 2

@@ -1,0 +1,41 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\n  \"ok\": true,\n  \"status\": \"partial\",\n  \"site_id\": \"xinhua\",\n  \"site_name\": \"新华网\",\n  \"channel\": \"politics\",\n  \"channel_name\": \"时政\",\n  \"requested_limit\": 2,\n  \"attempted_count\": 2,\n  \"discovered_count\": 2,\n  \"inserted_count\": 0,\n  \"updated_count\": 0,\n  \"failed_count\": 0,\n  \"partial_count\": 1,\n  \"source_mode\": \"html\",\n  \"fetched_at\": \"2026-11-17T13:57:48+00:00\",\n  \"started_at\": \"2026-11-17T13:57:42+00:00\",\n  \"errors\": [\n    {\n      \"url\": \"https://www.news.cn/politics/20261117/ca1bb9013a0c438ab5b1a8b212348933/c.html\",\n      \"code\": \"PARTIAL_EXTRACTION\",\n      \"message\": \"正文过短（21 字符，阈值 80）\",\n      \"http_status\": 200\n    }\n  ],\n  \"run_id\": \"3ebc48a51d3047a4a1b5860d2a1e42b7\",\n  \"live_urls\": [\n    \"https://www.news.cn/politics/20261117/3f1e8a88dbcb46df9ea455ffb5e144d9/c.html\",\n    \"https://www.news.cn/politics/20261117/ca1bb9013a0c438ab5b1a8b212348933/c.html\"\n  ],\n  \"scope\": \"live_http_fetch\"\n}"
+    }
+  ],
+  "structuredContent": {
+    "ok": true,
+    "status": "partial",
+    "site_id": "xinhua",
+    "site_name": "新华网",
+    "channel": "politics",
+    "channel_name": "时政",
+    "requested_limit": 2,
+    "attempted_count": 2,
+    "discovered_count": 2,
+    "inserted_count": 0,
+    "updated_count": 0,
+    "failed_count": 0,
+    "partial_count": 1,
+    "source_mode": "html",
+    "fetched_at": "2026-11-17T13:57:48+00:00",
+    "started_at": "2026-11-17T13:57:42+00:00",
+    "errors": [
+      {
+        "url": "https://www.news.cn/politics/20261117/ca1bb9013a0c438ab5b1a8b212348933/c.html",
+        "code": "PARTIAL_EXTRACTION",
+        "message": "正文过短（21 字符，阈值 80）",
+        "http_status": 200
+      }
+    ],
+    "run_id": "3ebc48a51d3047a4a1b5860d2a1e42b7",
+    "live_urls": [
+      "https://www.news.cn/politics/20261117/3f1e8a88dbcb46df9ea455ffb5e144d9/c.html",
+      "https://www.news.cn/politics/20261117/ca1bb9013a0c438ab5b1a8b212348933/c.html"
+    ],
+    "scope": "live_http_fetch"
+  },
+  "isError": false
+}

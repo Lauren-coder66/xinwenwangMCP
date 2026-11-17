@@ -1,0 +1,35 @@
+{
+  "mode": "app-offline",
+  "tested_at": "2026-11-17T14:04:06+00:00",
+  "env": {
+    "NEWS_MCP_OFFLINE": "1",
+    "HTTPS_PROXY": null
+  },
+  "article_count_before": 32,
+  "article_count_after": 32,
+  "refresh_status": "error",
+  "refresh_attempted": 0,
+  "refresh_failed": 0,
+  "refresh_error_codes": [
+    "NETWORK_DISABLED",
+    "NO_CANDIDATES"
+  ],
+  "refresh_errors": [
+    {
+      "code": "NETWORK_DISABLED",
+      "message": "网络请求被禁用（NEWS_MCP_OFFLINE=1）"
+    },
+    {
+      "code": "NO_CANDIDATES",
+      "message": "没有发现任何文章链接，未进行文章抓取"
+    }
+  ],
+  "latest_status": "ok",
+  "latest_data_status": "cache_after_refresh_error",
+  "latest_error": null,
+  "latest_refresh_errors": [
+    "NETWORK_DISABLED",
+    "NO_CANDIDATES"
+  ],
+  "no_articles_inserted": true
+}

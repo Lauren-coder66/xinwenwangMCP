@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "多站点新闻 MCP",
+    "description": "连接本地 news-mcp stdio 服务，让智能体读取新华网与中国新闻网的真实新闻，并保留可追溯的原文链接。",
+    "detail": "docs/DETAIL.md"
+  }
+}

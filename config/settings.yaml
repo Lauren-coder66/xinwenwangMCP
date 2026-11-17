@@ -1,0 +1,7 @@
+# Global settings for the multi-site news MCP server.
+default_site: xinhua
+default_limit: 10
+max_limit: 50
+search_timezone: Asia/Shanghai
+user_agent: "news-mcp/1.0 (+local research collector; respectful; configured by operator)"
+log_level: INFO

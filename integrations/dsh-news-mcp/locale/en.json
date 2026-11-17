@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "Multi-site news MCP",
+    "description": "Connects the local news-mcp stdio server so the agent can read verified news from Xinhua and China News Service with traceable source URLs.",
+    "detail": "docs/DETAIL.md"
+  }
+}

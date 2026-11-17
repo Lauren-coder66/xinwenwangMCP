@@ -1,0 +1,131 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\n  \"ok\": true,\n  \"status\": \"ok\",\n  \"site_id\": \"all\",\n  \"validated_only\": true,\n  \"channels\": [\n    {\n      \"site_id\": \"chinanews\",\n      \"site_name\": \"中国新闻网\",\n      \"channel\": \"latest\",\n      \"channel_id\": \"latest\",\n      \"name\": \"滚动新闻\",\n      \"url\": \"https://www.chinanews.com.cn/scroll-news/news1.html\",\n      \"source_url\": \"https://www.chinanews.com.cn/scroll-news/news1.html\",\n      \"validated\": true,\n      \"validation_status\": \"valid\",\n      \"last_checked_at\": \"2026-11-17T13:58:03+00:00\",\n      \"last_refresh_at\": \"2026-11-17T13:54:03+00:00\",\n      \"article_count\": 10,\n      \"last_error\": null,\n      \"timezone\": \"Asia/Shanghai\"\n    },\n    {\n      \"site_id\": \"xinhua\",\n      \"site_name\": \"新华网\",\n      \"channel\": \"culture\",\n      \"channel_id\": \"culture\",\n      \"name\": \"文化\",\n      \"url\": \"https://www.news.cn/culture/\",\n      \"source_url\": \"https://www.news.cn/culture/\",\n      \"validated\": true,\n      \"validation_status\": \"valid\",\n      \"last_checked_at\": \"2026-11-17T13:53:08+00:00\",\n      \"last_refresh_at\": null,\n      \"article_count\": 0,\n      \"last_error\": null,\n      \"timezone\": \"Asia/Shanghai\"\n    },\n    {\n      \"site_id\": \"xinhua\",\n      \"site_name\": \"新华网\",\n      \"channel\": \"fortune\",\n      \"channel_id\": \"fortune\",\n      \"name\": \"财经\",\n      \"url\": \"https://www.news.cn/fortune/index.htm\",\n      \"source_url\": \"https://www.news.cn/fortune/index.htm\",\n      \"validated\": true,\n      \"validation_status\": \"valid\",\n      \"last_checked_at\": \"2026-11-17T13:53:08+00:00\",\n      \"last_refresh_at\": null,\n      \"article_count\": 0,\n      \"last_error\": null,\n      \"timezone\": \"Asia/Shanghai\"\n    },\n    {\n      \"site_id\": \"xinhua\",\n      \"site_name\": \"新华网\",\n      \"channel\": \"politics\",\n      \"channel_id\": \"politics\",\n      \"name\": \"时政\",\n      \"url\": \"https://www.news.cn/politics/\",\n      \"source_url\": \"https://www.news.cn/politics/\",\n      \"validated\": true,\n      \"validation_status\": \"valid\",\n      \"last_checked_at\": \"2026-11-17T13:53:08+00:00\",\n      \"last_refresh_at\": \"2026-11-17T14:01:48+00:00\",\n      \"article_count\": 14,\n      \"last_error\": null,\n      \"timezone\": \"Asia/Shanghai\"\n    },\n    {\n      \"site_id\": \"xinhua\",\n      \"site_name\": \"新华网\",\n      \"channel\": \"sports\",\n      \"channel_id\": \"sports\",\n      \"name\": \"体育\",\n      \"url\": \"https://www.news.cn/sports/\",\n      \"source_url\": \"https://www.news.cn/sports/\",\n      \"validated\": true,\n      \"validation_status\": \"valid\",\n      \"last_checked_at\": \"2026-11-17T13:53:08+00:00\",\n      \"last_refresh_at\": null,\n      \"article_count\": 0,\n      \"last_error\": null,\n      \"timezone\": \"Asia/Shanghai\"\n    },\n    {\n      \"site_id\": \"xinhua\",\n      \"site_name\": \"新华网\",\n      \"channel\": \"tech\",\n      \"channel_id\": \"tech\",\n      \"name\": \"科技\",\n      \"url\": \"https://www.news.cn/tech/\",\n      \"source_url\": \"https://www.news.cn/tech/\",\n      \"validated\": true,\n      \"validation_status\": \"valid\",\n      \"last_checked_at\": \"2026-11-17T13:53:08+00:00\",\n      \"last_refresh_at\": null,\n      \"article_count\": 0,\n      \"last_error\": null,\n      \"timezone\": \"Asia/Shanghai\"\n    },\n    {\n      \"site_id\": \"xinhua\",\n      \"site_name\": \"新华网\",\n      \"channel\": \"world\",\n      \"channel_id\": \"world\",\n      \"name\": \"国际\",\n      \"url\": \"https://www.news.cn/world/\",\n      \"source_url\": \"https://www.news.cn/world/\",\n      \"validated\": true,\n      \"validation_status\": \"valid\",\n      \"last_checked_at\": \"2026-11-17T13:53:08+00:00\",\n      \"last_refresh_at\": \"2026-11-17T13:53:47+00:00\",\n      \"article_count\": 8,\n      \"last_error\": null,\n      \"timezone\": \"Asia/Shanghai\"\n    }\n  ],\n  \"count\": 7,\n  \"note\": \"仅返回已通过 validate_site 真实验证的频道。\"\n}"
+    }
+  ],
+  "structuredContent": {
+    "ok": true,
+    "status": "ok",
+    "site_id": "all",
+    "validated_only": true,
+    "channels": [
+      {
+        "site_id": "chinanews",
+        "site_name": "中国新闻网",
+        "channel": "latest",
+        "channel_id": "latest",
+        "name": "滚动新闻",
+        "url": "https://www.chinanews.com.cn/scroll-news/news1.html",
+        "source_url": "https://www.chinanews.com.cn/scroll-news/news1.html",
+        "validated": true,
+        "validation_status": "valid",
+        "last_checked_at": "2026-11-17T13:58:03+00:00",
+        "last_refresh_at": "2026-11-17T13:54:03+00:00",
+        "article_count": 10,
+        "last_error": null,
+        "timezone": "Asia/Shanghai"
+      },
+      {
+        "site_id": "xinhua",
+        "site_name": "新华网",
+        "channel": "culture",
+        "channel_id": "culture",
+        "name": "文化",
+        "url": "https://www.news.cn/culture/",
+        "source_url": "https://www.news.cn/culture/",
+        "validated": true,
+        "validation_status": "valid",
+        "last_checked_at": "2026-11-17T13:53:08+00:00",
+        "last_refresh_at": null,
+        "article_count": 0,
+        "last_error": null,
+        "timezone": "Asia/Shanghai"
+      },
+      {
+        "site_id": "xinhua",
+        "site_name": "新华网",
+        "channel": "fortune",
+        "channel_id": "fortune",
+        "name": "财经",
+        "url": "https://www.news.cn/fortune/index.htm",
+        "source_url": "https://www.news.cn/fortune/index.htm",
+        "validated": true,
+        "validation_status": "valid",
+        "last_checked_at": "2026-11-17T13:53:08+00:00",
+        "last_refresh_at": null,
+        "article_count": 0,
+        "last_error": null,
+        "timezone": "Asia/Shanghai"
+      },
+      {
+        "site_id": "xinhua",
+        "site_name": "新华网",
+        "channel": "politics",
+        "channel_id": "politics",
+        "name": "时政",
+        "url": "https://www.news.cn/politics/",
+        "source_url": "https://www.news.cn/politics/",
+        "validated": true,
+        "validation_status": "valid",
+        "last_checked_at": "2026-11-17T13:53:08+00:00",
+        "last_refresh_at": "2026-11-17T14:01:48+00:00",
+        "article_count": 14,
+        "last_error": null,
+        "timezone": "Asia/Shanghai"
+      },
+      {
+        "site_id": "xinhua",
+        "site_name": "新华网",
+        "channel": "sports",
+        "channel_id": "sports",
+        "name": "体育",
+        "url": "https://www.news.cn/sports/",
+        "source_url": "https://www.news.cn/sports/",
+        "validated": true,
+        "validation_status": "valid",
+        "last_checked_at": "2026-11-17T13:53:08+00:00",
+        "last_refresh_at": null,
+        "article_count": 0,
+        "last_error": null,
+        "timezone": "Asia/Shanghai"
+      },
+      {
+        "site_id": "xinhua",
+        "site_name": "新华网",
+        "channel": "tech",
+        "channel_id": "tech",
+        "name": "科技",
+        "url": "https://www.news.cn/tech/",
+        "source_url": "https://www.news.cn/tech/",
+        "validated": true,
+        "validation_status": "valid",
+        "last_checked_at": "2026-11-17T13:53:08+00:00",
+        "last_refresh_at": null,
+        "article_count": 0,
+        "last_error": null,
+        "timezone": "Asia/Shanghai"
+      },
+      {
+        "site_id": "xinhua",
+        "site_name": "新华网",
+        "channel": "world",
+        "channel_id": "world",
+        "name": "国际",
+        "url": "https://www.news.cn/world/",
+        "source_url": "https://www.news.cn/world/",
+        "validated": true,
+        "validation_status": "valid",
+        "last_checked_at": "2026-11-17T13:53:08+00:00",
+        "last_refresh_at": "2026-11-17T13:53:47+00:00",
+        "article_count": 8,
+        "last_error": null,
+        "timezone": "Asia/Shanghai"
+      }
+    ],
+    "count": 7,
+    "note": "仅返回已通过 validate_site 真实验证的频道。"
+  },
+  "isError": false
+}

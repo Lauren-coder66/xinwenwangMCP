@@ -24,7 +24,7 @@ class StrictModel(BaseModel):
 
 
 class DiscoveryConfig(StrictModel):
-    type: Literal["rss", "sitemap", "html"]
+    type: Literal["rss", "sitemap", "html", "json"]
     url: str | None = None
     link_selector: str = "a[href]"
     url_pattern: str | None = None
@@ -32,6 +32,11 @@ class DiscoveryConfig(StrictModel):
     max_items: int = Field(default=100, ge=1, le=1000)
     timeout_seconds: float | None = Field(default=None, ge=1, le=120)
     same_channel_path: bool = True
+    # JSON discovery (official policy portals often expose a static JSON list)
+    items_path: str | None = None
+    title_key: str = "title"
+    url_key: str = "url"
+    date_key: str | None = None
 
 
 class ArticleRules(StrictModel):
@@ -40,7 +45,14 @@ class ArticleRules(StrictModel):
         default_factory=lambda: [".info", ".header-time", ".time", "time"]
     )
     date_meta_names: list[str] = Field(
-        default_factory=lambda: ["publishdate", "pubdate", "date", "article:published_time"]
+        default_factory=lambda: [
+            "publishdate",
+            "pubdate",
+            "date",
+            "article:published_time",
+            "firstpublishedtime",
+            "lastmodifiedtime",
+        ]
     )
     datetime_regex: str = (
         r"(20\d{2}[-/年]\d{1,2}[-/月]\d{1,2}日?"
@@ -130,6 +142,7 @@ class SiteConfig(StrictModel):
     homepage: str
     enabled: bool = True
     timezone: str = "Asia/Shanghai"
+    html_parser: Literal["lxml", "html.parser"] = "lxml"
     allowed_domains: list[str] = Field(min_length=1)
     host_aliases: dict[str, str] = Field(default_factory=dict)
     article_url_patterns: list[str] = Field(min_length=1)
@@ -137,6 +150,7 @@ class SiteConfig(StrictModel):
     timeout_seconds: float = Field(default=25, ge=3, le=120)
     max_redirects: int = Field(default=3, ge=0, le=10)
     max_response_bytes: int = Field(default=4_000_000, ge=100_000, le=20_000_000)
+    trust_env: bool = True
     respect_robots: bool = True
     robots_failure_policy: Literal["closed", "open"] = "closed"
     user_agent: str | None = None

@@ -37,11 +37,11 @@
 
 ```text
 ...............................................                          [100%]
-50 passed in 42.28s
+53 passed in 51.06s
 ```
 
-- 单元测试（不联网）：46 passed（含 HTTP 传输/鉴权测试）
-- 真实网络集成测试：4 passed
+- 单元测试（不联网）：48 passed（含 HTTP 传输/鉴权测试、JSON 政策发现）
+- 真实网络集成测试：5 passed（新增中国政府网政策验证）
   - 新华网真实采集 + 重复采集去重
   - 新华网 + 中国新闻网跨站检索
   - 中国新闻网真实验证
@@ -57,8 +57,8 @@
 |---|---|
 | `tools/list` + `--strict` | exit 0；8 个工具，schema 可移植性检查通过 |
 | `initialize` | Inspector 自动完成，服务名 `news-mcp` |
-| `list_sites` | 2 个站点，均为 `active` |
-| `list_channels` | 7 个已验证频道（新华网 6 + 中国新闻网 1） |
+| `list_sites` | 3 个站点，均为 `active` |
+| `list_channels` | 8 个已验证频道（新华网 6 + 中国新闻网 1 + 中国政府网 1） |
 | `get_latest_news` 新华网 | 真实缓存返回，`data_status=local_cache_only` |
 | `get_latest_news` 中国新闻网 | 真实缓存返回，来源字段正确 |
 | `search_news` 跨站 | 5 条结果，包含 `site_id/site_name`，带本地范围声明 |
@@ -113,11 +113,11 @@ DeepSeek Harness 通过配置型 bundle `integrations/dsh-news-mcp/` 连接同�
 
 完整调用记录与最终回答：[`evidence/ai_client_call.md`](../evidence/ai_client_call.md)
 
-- `mcp__news__list_sites`：2 个站点
+- `mcp__news__list_sites`：录制时为 2 个站点；新增政策源后当前为 3 个
 - `mcp__news__get_latest_news(refresh=true)`：真实刷新 3 条，`data_status=live_refresh_completed`
 - `mcp__news__search_news(site_id=all)`：跨站 5/12 条
 - `mcp__news__get_article`：中国新闻网正文 718 字
-- `mcp__news__list_channels`：7 个已验证频道
+- `mcp__news__list_channels`：录制时 7 个；新增政策源后当前为 8 个
 
 ## 6. 验收量化结果
 
@@ -126,7 +126,7 @@ DeepSeek Harness 通过配置型 bundle `integrations/dsh-news-mcp/` 连接同�
 | 验收项 | 结果 |
 |---|---|
 | 5 个原始工具可发现/调用 | 通过；另加 `list_sites`、`inspect_site`、`validate_site`，共 8 个 |
-| 至少 10 条有效新闻 | 数据库 32 条（新华网 22 + 中国新闻网 10） |
+| 至少 10 条有效新闻 | 验收时 32 条；新增政策源后当前 71 条（新华网 31 + 中国新闻网 20 + 中国政府网 20） |
 | 10 条人工抽样标题/日期/链接 | 10/10、10/10、10/10 |
 | 10 篇可见正文提取 | 10/10（每篇 ≥80 字） |
 | 正文不含导航/广告/推荐 | 10/10 `nav_clean` |
@@ -147,6 +147,14 @@ DeepSeek Harness 通过配置型 bundle `integrations/dsh-news-mcp/` 连接同�
 ### 实时性与新文章
 
 验收期间从新华网当前栏目页取一个**数据库未保存**的 URL，通过 `get_article` 实时读取《2027年全国硕士研究生招生考试报名人数为347万》，正文 647 字，数据库由 31 增至 32。证明不是固定样本回放。
+
+### 中国政府网政策源
+
+- 新增 `gov_cn` / `latest_policy`；
+- 官方 JSON `ZUIXINZHENGCE.json` 返回 1117 条，按配置取前 20 条；
+- 2/2 样本正文成功，单篇 8175–12841 字；
+- 由于文章页嵌套表格，配置 `html_parser: html.parser`（lxml 会丢失正文）；
+- 该源验证后，数据库当前为 71 条。
 
 ## 7. 测试中发现并修复的问题
 

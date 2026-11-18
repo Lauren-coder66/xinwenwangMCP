@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import json
 import logging
 import posixpath
 import re
@@ -290,6 +291,116 @@ class RssDiscovery:
         )
 
 
+class JsonDiscovery:
+    """Discover a list from a static JSON endpoint.
+
+    Official portals frequently expose a JSON list while the rendered channel
+    page is JavaScript-only. The mapping is explicit in YAML, so this remains
+    configuration-driven rather than a site-specific code branch.
+    """
+
+    mode = "json"
+
+    def __init__(self, site: SiteConfig, channel: ChannelConfig, config: DiscoveryConfig):
+        self.site = site
+        self.channel = channel
+        self.config = config
+
+    def _items(self, data):
+        if self.config.items_path:
+            current = data
+            for part in self.config.items_path.split("."):
+                current = current[part]
+            data = current
+        if not isinstance(data, list):
+            raise ValueError("items_path 未指向 JSON 数组")
+        return data
+
+    def discover(self, http: HttpClient, limit: int) -> DiscoveryResult:
+        url = self.config.url or self.channel.url
+        result = http.get(
+            url,
+            allowed_domains=self.site.allowed_domains,
+            check_robots=self.site.respect_robots,
+            allow_content_types={"application/json", "text/json"},
+        )
+        if not result.ok:
+            return DiscoveryResult(
+                [],
+                self.mode,
+                errors=[_error(result.error_code or "JSON_FETCH_FAILED", result.error or "JSON 抓取失败")],
+                diagnostics={"url": url, "http_status": result.status_code},
+            )
+        try:
+            payload = json.loads(result.text or "")
+            items = self._items(payload)
+        except Exception as exc:  # noqa: BLE001
+            return DiscoveryResult(
+                [],
+                self.mode,
+                errors=[_error("JSON_INVALID", f"JSON 解析/路径失败: {exc}")],
+                diagnostics={"url": url},
+            )
+        now = datetime.now(UTC)
+        pattern = self.config.url_pattern or self.site.article_url_patterns[0]
+        candidates: list[Candidate] = []
+        seen: set[str] = set()
+        for item in items:
+            if not isinstance(item, dict):
+                continue
+            raw_url = item.get(self.config.url_key)
+            title = str(item.get(self.config.title_key) or "").strip()
+            if not raw_url:
+                continue
+            try:
+                normalized = normalize_url(
+                    str(raw_url), base=url, host_aliases=self.site.host_aliases
+                )
+            except UrlValidationError:
+                continue
+            parts = urlsplit(normalized)
+            if not host_allowed(parts.hostname or "", self.site.allowed_domains):
+                continue
+            if not _url_matches(pattern, normalized):
+                continue
+            raw_date = item.get(self.config.date_key) if self.config.date_key else None
+            published = None
+            if raw_date:
+                try:
+                    published = parse_article_time(str(raw_date), self.site.timezone).published_at
+                except DateParseError:
+                    published = None
+            if not _within_age(published, self.config.max_age_days, now):
+                continue
+            if normalized in seen:
+                continue
+            seen.add(normalized)
+            candidates.append(
+                Candidate(
+                    url=normalized,
+                    title=title,
+                    channel_id=self.channel.id,
+                    source_mode=self.mode,
+                    published_at=published,
+                    published_at_raw=str(raw_date) if raw_date else None,
+                )
+            )
+            if len(candidates) >= min(limit, self.config.max_items):
+                break
+        if not candidates:
+            return DiscoveryResult(
+                [],
+                self.mode,
+                errors=[_error("JSON_NO_ARTICLES", "JSON 列表中没有符合文章规则的条目")],
+                diagnostics={"url": url, "items": len(items)},
+            )
+        return DiscoveryResult(
+            candidates,
+            self.mode,
+            diagnostics={"url": url, "items": len(items), "returned": len(candidates)},
+        )
+
+
 class SitemapDiscovery:
     mode = "sitemap"
 
@@ -403,6 +514,8 @@ def build_discovery(
         return RssDiscovery(site, channel, config)
     if config.type == "sitemap":
         return SitemapDiscovery(site, channel, config)
+    if config.type == "json":
+        return JsonDiscovery(site, channel, config)
     raise DiscoveryError("UNKNOWN_DISCOVERY_TYPE", f"未知发现方式: {config.type}")
 
 

@@ -4,7 +4,12 @@ from email.utils import format_datetime
 from datetime import datetime, timezone
 
 from news_mcp.config import DiscoveryConfig
-from news_mcp.discovery import HtmlDiscovery, RssDiscovery, SitemapDiscovery
+from news_mcp.discovery import (
+    HtmlDiscovery,
+    JsonDiscovery,
+    RssDiscovery,
+    SitemapDiscovery,
+)
 from news_mcp.models import FetchResult
 
 
@@ -78,6 +83,45 @@ def test_rss_stale_feed_is_rejected(xinhua_site):
     ).discover(http, 10)
     assert result.candidates == []
     assert result.errors[0]["code"] == "RSS_STALE"
+
+
+def test_json_discovery_extracts_official_policy_list():
+    from news_mcp.config import load_registry
+    from pathlib import Path
+
+    registry = load_registry(Path(__file__).resolve().parent.parent / "config")
+    gov_site = registry.get("gov_cn")
+    assert gov_site is not None
+    channel = gov_site.channel("latest_policy")
+    assert channel is not None
+    payload = """[
+      {"TITLE":"政策一","URL":"https://www.gov.cn/zhengce/202611/content_1.htm","DOCRELPUBTIME":"2026-11-15"},
+      {"TITLE":"政策二","URL":"https://www.gov.cn/zhengce/content/202611/content_2.htm","DOCRELPUBTIME":"2026-11-10"}
+    ]"""
+    http = FakeHttp(
+        {
+            "https://www.gov.cn/zhengce/zuixin/ZUIXINZHENGCE.json": _ok(
+                "https://www.gov.cn/zhengce/zuixin/ZUIXINZHENGCE.json",
+                payload,
+                "application/json",
+            )
+        }
+    )
+    result = JsonDiscovery(
+        gov_site,
+        channel,
+        DiscoveryConfig(
+            type="json",
+            url="https://www.gov.cn/zhengce/zuixin/ZUIXINZHENGCE.json",
+            title_key="TITLE",
+            url_key="URL",
+            date_key="DOCRELPUBTIME",
+            url_pattern=r"^/zhengce/(?:content/)?20\d{4}/content_\d+\.htm$",
+        ),
+    ).discover(http, 10)
+    assert len(result.candidates) == 2
+    assert result.candidates[0].title == "政策一"
+    assert result.candidates[0].published_at == "2026-11-14T16:00:00+00:00"
 
 
 def test_sitemap_discovery_extracts_matching_urls(xinhua_site):

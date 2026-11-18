@@ -93,6 +93,19 @@ def test_chinanews_validation_is_real(tmp_path):
         svc.close()
 
 
+def test_gov_cn_policy_validation_is_real(tmp_path):
+    svc = _service(tmp_path)
+    try:
+        report = svc.validate_site("gov_cn")
+        assert report["ok"] is True
+        assert report["valid_channels"] >= 1
+        channel = report["channels"][0]
+        assert channel["checks"][1]["ok"] is True
+        assert channel["samples"][0]["content_chars"] >= 80
+    finally:
+        svc.close()
+
+
 def test_xinhua_rss_is_reachable_but_stale():
     registry = load_registry(ROOT / "config")
     site = registry.get("xinhua")

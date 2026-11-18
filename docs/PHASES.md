@@ -109,7 +109,7 @@
 
 **测试**
 
-- 50/50 pytest 通过（含远程 HTTP 传输测试）；
+- 53/53 pytest 通过（含远程 HTTP 传输与中国政府网政策源测试）；
 - 全新 `.venv_fresh` 安装 requirements 后 Inspector `list_sites` 成功；
 - 所有原始证据可追溯。
 
@@ -144,3 +144,27 @@
 - 全量 pytest 50 passed。
 
 **遗留**：没有真实 ChatGPT/豆包账号，平台 App 扫描和对话调用需用户用公网 HTTPS 地址完成；ChatGPT 当前主要支持 OAuth/无鉴权，未实现 OAuth。
+
+## 第七阶段：官方政策源（面向一人公司政策解读）
+
+**新增文件**
+
+- `config/sites/gov_cn.yaml`
+- `docs/POLICY.md`
+- `evidence/gov_cn_validation.json`、`evidence/policy_scan.json`
+
+**实现**
+
+- 新增 `json` 发现模式（官方政策门户常用静态 JSON）；
+- 中国政府网“最新政策”接入：1117 条 JSON 列表、默认采集 20 条；
+- 新增 `html_parser: html.parser` 站点选项（lxml 会丢失嵌套表格正文）；
+- 新增 `trust_env` 站点选项（政府网站可能不能走代理）；
+- 验证 2/2 篇正文成功。
+
+**测试**
+
+- `gov_cn` 真实验证通过；
+- 全量 pytest 53 passed；
+- 当前数据库 71 条（新闻 51 + 政策 20）。
+
+**下一步**：根据用户所在城市/行业接入地方工信、科技、人社、税务、园区申报源，并增加“政策适用性/截止日期/金额”结构化字段。当前只完成“政策原文可采集”，不等于已完成“补贴匹配”。

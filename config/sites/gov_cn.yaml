@@ -1,0 +1,74 @@
+site_id: gov_cn
+name: 中国政府网
+homepage: https://www.gov.cn/
+enabled: true
+timezone: Asia/Shanghai
+html_parser: html.parser
+trust_env: false
+allowed_domains:
+  - gov.cn
+article_url_patterns:
+  - '^https://www\.gov\.cn/zhengce/(?:content/)?20\d{4}/content_\d+\.htm$'
+request_delay_seconds: 1.5
+timeout_seconds: 25
+max_redirects: 3
+respect_robots: true
+robots_failure_policy: closed
+discovery_note: >-
+  2026-11-18 实测：中国政府网“最新政策”页面由 JavaScript 渲染，
+  但同目录 ZUIXINZHENGCE.json 返回完整政策列表；因此使用 JSON 发现。
+  文章页需使用 html.parser，lxml 会因嵌套表格丢弃 UCAP-CONTENT 正文。
+channels:
+  - id: latest_policy
+    name: 最新政策
+    url: https://www.gov.cn/zhengce/zuixin/
+    discovery:
+      - type: json
+        url: https://www.gov.cn/zhengce/zuixin/ZUIXINZHENGCE.json
+        title_key: TITLE
+        url_key: URL
+        date_key: DOCRELPUBTIME
+        url_pattern: '^/zhengce/(?:content/)?20\d{4}/content_\d+\.htm$'
+article:
+  title_selectors:
+    - ".share-title"
+    - "h1"
+  published_at_selectors:
+    - ".share-time"
+    - ".time"
+  date_meta_names:
+    - firstpublishedtime
+    - lastmodifiedtime
+  datetime_regex: '(20\d{2}[-/]\d{1,2}[-/]\d{1,2}(?:[- ]\d{1,2}:\d{2}(?::\d{2})?)?)'
+  source_selectors:
+    - ".source"
+  author_selectors:
+    - ".author"
+  summary_meta_names:
+    - description
+    - og:description
+  content_selectors:
+    - "#UCAP-CONTENT"
+  paragraph_selector: p
+  remove_selectors:
+    - script
+    - style
+    - noscript
+    - iframe
+    - .ad
+    - .advert
+    - .recommend
+    - .related
+    - .share
+    - .qrcode
+    - .editor
+    - .copyright
+  strip_title_suffixes:
+    - "-中国政府网"
+    - "_中国政府网"
+  min_content_chars: 80
+  allow_generic_content_fallback: false
+validation:
+  sample_articles: 2
+  min_ok_articles: 1
+  max_channels: 2

@@ -9,9 +9,11 @@
 | `phase1_xinhua.md` | 第一阶段人类可读摘要 |
 | `dataset_build.json` | 最终数据集构建过程：两站验证、采集计数、重复采集、审计运行 |
 | `acceptance_audit.json` | 10 条人工可核对样本（标题/日期/URL/正文/导航清洗）、实时新 URL、404、去重 |
+| `gov_cn_validation.json` | 中国政府网最新政策源真实验证（JSON 发现 + 2 篇正文） |
+| `policy_scan.json` | 一人公司相关关键词在政策库中的命中扫描 |
 | `news_samples.csv` | 32 条入库文章的完整 CSV（含正文与原文 URL，UTF-8 BOM） |
 | `news_samples.json` | 同上，JSON |
-| `pytest_full.txt` | 50 个 pytest 的原始输出 |
+| `pytest_full.txt` | 53 个 pytest 的原始输出 |
 | `mcp_client_smoke.json` | 独立官方 SDK 客户端 initialize/tools/list/tools/call |
 | `ai_client_call.md` | DeepSeek Harness 真实 AI 客户端工具调用日志与最终回答 |
 | `dsh_bundle_install.json` | DeepSeek Harness 配置型 bundle 安装结果（`application=applied`）与暴露的工具名 |

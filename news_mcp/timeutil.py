@@ -11,7 +11,7 @@ UTC = timezone.utc
 _DATE_ONLY = re.compile(r"^\s*(20\d{2})[-/年](\d{1,2})[-/月](\d{1,2})日?\s*$")
 _DATETIME_CN = re.compile(
     r"(?P<y>20\d{2})[-/年](?P<m>\d{1,2})[-/月](?P<d>\d{1,2})日?"
-    r"(?:\s*[T ]?\s*(?P<H>\d{1,2}):(?P<M>\d{2})(?::(?P<S>\d{2}))?)?"
+    r"(?:\s*(?:[T ]|-(?=\d{1,2}:))\s*(?P<H>\d{1,2}):(?P<M>\d{2})(?::(?P<S>\d{2}))?)?"
 )
 
 
@@ -68,7 +68,8 @@ def parse_article_time(raw: str | None, timezone_name: str) -> TimeInfo:
     try:
         dt = datetime.fromisoformat(iso)
         has_time = bool(re.search(r"\d{1,2}:\d{2}", text))
-        precision = "second" if has_time and dt.second else ("minute" if has_time else "date_only")
+        has_seconds = bool(re.search(r"\d{1,2}:\d{2}:\d{2}", text))
+        precision = "second" if has_seconds else ("minute" if has_time else "date_only")
         if dt.tzinfo is None:
             dt = dt.replace(tzinfo=tz)
         return _build(dt, precision, text)

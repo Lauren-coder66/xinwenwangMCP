@@ -19,6 +19,12 @@ def test_parse_chinanews_chinese_timestamp():
     assert info.precision == "minute"
 
 
+def test_parse_gov_cn_dash_timestamp():
+    info = parse_article_time("2026-11-05-17:00:00", "Asia/Shanghai")
+    assert info.published_at_local == "2026-11-05T17:00:00+08:00"
+    assert info.precision == "second"
+
+
 def test_parse_date_only_marks_reduced_precision():
     info = parse_article_time("2026-11-17", "Asia/Shanghai")
     assert info.published_at_local == "2026-11-17T00:00:00+08:00"

@@ -104,7 +104,7 @@ class ArticleParser:
         http_status: int = 200,
         final_url: str | None = None,
     ) -> ParsedArticle:
-        soup = BeautifulSoup(html, "lxml")
+        soup = BeautifulSoup(html, self.site.html_parser)
         title = self._extract_title(soup)
         raw_date, date_source = self._extract_date(soup)
         source = self._extract_source(soup)

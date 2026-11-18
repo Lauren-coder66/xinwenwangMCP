@@ -8,6 +8,8 @@
 
 - 新华网：6 个频道通过真实样本验证（时政、国际、财经、科技、文化、体育），30+ 条真实文章；`www.news.cn` 与 `www.xinhuanet.com` 栏目页/robots 均实测 HTTP 200，统一规范到 `www.news.cn`。
 - 中国新闻网：滚动新闻频道通过真实样本验证，使用独立的 YAML 配置接入，**未修改 MCP Server 核心代码，也未修改新华网适配器**。
+- 中国政府网：`latest_policy`（最新政策）通过真实样本验证，使用官方 JSON 列表发现。
+- 当前共 **3 个站点、8 个已验证频道、71 条本地文章**（新华网 31、中国新闻网 20、中国政府网 20）。政策机会设计见 [`docs/POLICY.md`](docs/POLICY.md)。
 - 新华网官方 RSS：HTTP 200，但只有 2022 年历史条目，最新为 2022-12-14，已明确判定为过期，不用于最新新闻。
 - 8 个 MCP 工具全部可被 `tools/list` 发现；Inspector、独立官方 SDK 客户端、DeepSeek Harness 真实 AI 客户端均已调用成功。
 - 已增加远程 **Streamable HTTP** 传输，可供 ChatGPT 自定义 App/Connector 和豆包插件通过公网 HTTPS 调用；本地 HTTP 协议已用 Inspector 验证。
@@ -176,7 +178,7 @@ cloudflared tunnel --url http://127.0.0.1:8765
 
 ## 新增网站
 
-完整操作见 [`docs/ADDING_A_SITE.md`](docs/ADDING_A_SITE.md)。最短流程：
+完整操作见 [`docs/ADDING_A_SITE.md`](docs/ADDING_A_SITE.md)，政策源规划见 [`docs/POLICY.md`](docs/POLICY.md)。最短流程：
 
 1. 用 `inspect_site` 或 CLI 检查目标 URL，得到**未经确认**的候选 YAML；
 2. 人工审查选择器和 URL 规则，保存为 `config/sites/<site_id>.yaml`；
@@ -220,12 +222,12 @@ run_http.bat             Windows 远程 HTTP 启动脚本
 docs/REMOTE_MCP.md       ChatGPT / 豆包远程接入说明
 integrations/chatgpt/    ChatGPT 自定义 App/Connector 配置说明
 integrations/doubao/     豆包插件 plugin.json + mcp.json
-config/                  settings.yaml + sites/xinhua.yaml + sites/chinanews.yaml
+config/                  settings.yaml + sites/xinhua.yaml + sites/chinanews.yaml + sites/gov_cn.yaml
 news_mcp/                核心：config/fetch/parsers/discovery/adapters/storage/service/server
 tests/                   pytest 单元与真实网络测试
 scripts/                 第一阶段证据、数据集构建、验收、离线、MCP 客户端脚本
 evidence/                原始 JSON/日志与 AI 调用记录
-docs/                    新增站点说明、测试报告
+docs/                    新增站点说明、政策机会设计、测试报告
 integrations/dsh-news-mcp/  DeepSeek Harness 配置型连接器
 data/news.db             本地 SQLite（可重建）
 ```

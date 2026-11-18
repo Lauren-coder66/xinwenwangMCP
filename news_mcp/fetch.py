@@ -32,6 +32,7 @@ HTML_TYPES = {
     "text/xml",
     "application/rss+xml",
     "application/atom+xml",
+    "application/json",
 }
 
 
@@ -88,6 +89,7 @@ class HttpClient:
             timeout=httpx.Timeout(site.timeout_seconds),
             follow_redirects=False,
             transport=transport,
+            trust_env=site.trust_env,
             headers={
                 "User-Agent": self.user_agent,
                 "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",

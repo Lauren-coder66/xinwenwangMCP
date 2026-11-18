@@ -1,0 +1,103 @@
+{
+  "site_id": "gov_cn",
+  "validated_at": "2026-11-18T02:45:46+00:00",
+  "ok": true,
+  "valid_channels": 1,
+  "total_channels_checked": 1,
+  "channels": [
+    {
+      "channel_id": "latest_policy",
+      "name": "最新政策",
+      "url": "https://www.gov.cn/zhengce/zuixin/",
+      "ok": true,
+      "checks": [
+        {
+          "name": "discovery",
+          "ok": true,
+          "detail": "发现 6 篇文章链接",
+          "evidence": {
+            "attempted_sources": [
+              {
+                "type": "json",
+                "ok": true,
+                "returned": 6,
+                "diagnostics": {
+                  "url": "https://www.gov.cn/zhengce/zuixin/ZUIXINZHENGCE.json",
+                  "items": 1117,
+                  "returned": 6
+                }
+              }
+            ],
+            "url": "https://www.gov.cn/zhengce/zuixin/ZUIXINZHENGCE.json",
+            "items": 1117,
+            "returned": 6
+          }
+        },
+        {
+          "name": "article_parse",
+          "ok": true,
+          "detail": "2/2 个样本正文提取成功",
+          "evidence": {
+            "samples": [
+              {
+                "url": "https://www.gov.cn/zhengce/202611/content_7086080.htm",
+                "http_status": 200,
+                "fetch_error": null,
+                "title": "中共中央印发《中国共产党地方委员会工作条例》",
+                "published_at": "2026-11-15T09:10:00+00:00",
+                "published_at_local": "2026-11-15T17:10:00+08:00",
+                "content_chars": 8175,
+                "content_preview": "新华社北京11月15日电 近日，中共中央印发了修订后的《中国共产党地方委员会工作条例》（以下简称《条例》），并发出通知，要求各地区各部门认真遵照执行。\n通知指出，《条例》以习近平新时代中国特色社会主义思想为指导，深入贯彻党的二十大和二十届历次全会精神，认真落实五中全会部署，全面贯彻习近平党建思想，着眼以中国式现代化全面",
+                "extraction_status": "ok",
+                "extraction_error": null
+              },
+              {
+                "url": "https://www.gov.cn/zhengce/content/202611/content_7085661.htm",
+                "http_status": 200,
+                "fetch_error": null,
+                "title": "基金会管理条例",
+                "published_at": "2026-11-10T09:00:00+00:00",
+                "published_at_local": "2026-11-10T17:00:00+08:00",
+                "content_chars": 12841,
+                "content_preview": "中华人民共和国国务院令\n第848号\n《基金会管理条例》已经2026年9月11日国务院第96次常务会议修订通过，现予公布，自2027年1月1日起施行。\n总理  李强\n2026年10月13日\n基金会管理条例\n（2004年3月8日中华人民共和国国务院令第400号公布 2026年10月13日中华人民共和国国务院令第848号修订",
+                "extraction_status": "ok",
+                "extraction_error": null
+              }
+            ]
+          }
+        }
+      ],
+      "samples": [
+        {
+          "url": "https://www.gov.cn/zhengce/202611/content_7086080.htm",
+          "http_status": 200,
+          "fetch_error": null,
+          "title": "中共中央印发《中国共产党地方委员会工作条例》",
+          "published_at": "2026-11-15T09:10:00+00:00",
+          "published_at_local": "2026-11-15T17:10:00+08:00",
+          "content_chars": 8175,
+          "content_preview": "新华社北京11月15日电 近日，中共中央印发了修订后的《中国共产党地方委员会工作条例》（以下简称《条例》），并发出通知，要求各地区各部门认真遵照执行。\n通知指出，《条例》以习近平新时代中国特色社会主义思想为指导，深入贯彻党的二十大和二十届历次全会精神，认真落实五中全会部署，全面贯彻习近平党建思想，着眼以中国式现代化全面",
+          "extraction_status": "ok",
+          "extraction_error": null
+        },
+        {
+          "url": "https://www.gov.cn/zhengce/content/202611/content_7085661.htm",
+          "http_status": 200,
+          "fetch_error": null,
+          "title": "基金会管理条例",
+          "published_at": "2026-11-10T09:00:00+00:00",
+          "published_at_local": "2026-11-10T17:00:00+08:00",
+          "content_chars": 12841,
+          "content_preview": "中华人民共和国国务院令\n第848号\n《基金会管理条例》已经2026年9月11日国务院第96次常务会议修订通过，现予公布，自2027年1月1日起施行。\n总理  李强\n2026年10月13日\n基金会管理条例\n（2004年3月8日中华人民共和国国务院令第400号公布 2026年10月13日中华人民共和国国务院令第848号修订",
+          "extraction_status": "ok",
+          "extraction_error": null
+        }
+      ],
+      "errors": []
+    }
+  ],
+  "errors": [],
+  "status": "valid",
+  "validated_only": true,
+  "note": "验证会真实访问栏目页和文章页；只有至少一个频道有可解析正文的样本，该频道才会被 list_channels 返回。"
+}

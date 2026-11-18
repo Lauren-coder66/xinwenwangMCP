@@ -50,6 +50,7 @@ async def test_mcp_stdio_initialize_list_and_invalid_url(tmp_path):
             assert {s["site_id"] for s in result.structured_content["sites"]} == {
                 "xinhua",
                 "chinanews",
+                "gov_cn",
             }
 
             rejected = await session.call_tool(

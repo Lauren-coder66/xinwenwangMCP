@@ -16,6 +16,7 @@ dependencies = [
   "PyYAML==6.0.3",
   "feedparser==6.0.14",
   "tzdata==2026.6",
+  "uvicorn==0.54.0",
 ]
 
 [project.optional-dependencies]
@@ -26,6 +27,7 @@ test = [
 
 [project.scripts]
 news-mcp = "news_mcp.server:main"
+news-mcp-http = "news_mcp.http_server:main"
 news-mcp-cli = "news_mcp.cli:main"
 
 [tool.setuptools.packages.find]

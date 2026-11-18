@@ -109,8 +109,38 @@
 
 **测试**
 
-- 47/47 pytest 通过；
+- 50/50 pytest 通过（含远程 HTTP 传输测试）；
 - 全新 `.venv_fresh` 安装 requirements 后 Inspector `list_sites` 成功；
 - 所有原始证据可追溯。
 
 **遗留**：见 README/TEST_REPORT 的已知限制；没有把视频稿补成正文，没有把候选配置自动标记为有效。
+
+## 第六阶段：远程 MCP（ChatGPT / 豆包）
+
+**新增文件**
+
+- `news_mcp/http_server.py`（Streamable HTTP + `/healthz` + 可选 Bearer）
+- `run_http.bat`
+- `tests/test_http_server.py`
+- `docs/REMOTE_MCP.md`
+- `integrations/chatgpt/README.md`
+- `integrations/doubao/plugin.json`、`mcp.json`、`README.md`
+
+**实现**
+
+- 复用同一个 `MCPServer`，不改业务逻辑；
+- stdio 与 Streamable HTTP 双传输；
+- 本地 `127.0.0.1:8765/mcp`，公网通过 Cloudflare Tunnel/ngrok；
+- 可选 `Authorization: Bearer` / `X-API-Key`；
+- 可选 Host 白名单；
+- ChatGPT 无鉴权配置说明、豆包 `mcp.json` 配置。
+
+**测试**
+
+- `/healthz` 200；
+- HTTP `tools/list` 8 个工具；
+- HTTP `tools/call` 成功；
+- Bearer：无 token 401，带 token 可访问；
+- 全量 pytest 50 passed。
+
+**遗留**：没有真实 ChatGPT/豆包账号，平台 App 扫描和对话调用需用户用公网 HTTPS 地址完成；ChatGPT 当前主要支持 OAuth/无鉴权，未实现 OAuth。

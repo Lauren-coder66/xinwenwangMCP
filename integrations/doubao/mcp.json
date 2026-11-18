@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "news": {
+      "type": "streamable-http",
+      "url": "https://YOUR_PUBLIC_HOST/mcp",
+      "headers": {
+        "Authorization": "Bearer YOUR_MCP_HTTP_TOKEN"
+      }
+    }
+  }
+}

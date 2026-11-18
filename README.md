@@ -10,6 +10,7 @@
 - 中国新闻网：滚动新闻频道通过真实样本验证，使用独立的 YAML 配置接入，**未修改 MCP Server 核心代码，也未修改新华网适配器**。
 - 新华网官方 RSS：HTTP 200，但只有 2022 年历史条目，最新为 2022-12-14，已明确判定为过期，不用于最新新闻。
 - 8 个 MCP 工具全部可被 `tools/list` 发现；Inspector、独立官方 SDK 客户端、DeepSeek Harness 真实 AI 客户端均已调用成功。
+- 已增加远程 **Streamable HTTP** 传输，可供 ChatGPT 自定义 App/Connector 和豆包插件通过公网 HTTPS 调用；本地 HTTP 协议已用 Inspector 验证。
 - 详细证据见 [`evidence/`](evidence/)、[`docs/TEST_REPORT.md`](docs/TEST_REPORT.md) 与分阶段记录 [`docs/PHASES.md`](docs/PHASES.md)。
 
 ## 架构
@@ -110,6 +111,34 @@ stdout 只承载 MCP JSON-RPC；日志写入 stderr，不会污染协议。
 
 [`integrations/dsh-news-mcp/`](integrations/dsh-news-mcp/) 是配置型 bundle，不包含抓取逻辑；安装后工具名为 `mcp__news__list_sites` 等。实际调用记录见 [`evidence/ai_client_call.md`](evidence/ai_client_call.md)。
 
+## 远程 MCP：ChatGPT / 豆包
+
+ChatGPT 和豆包不能直接启动本地 stdio 进程，需要**公网 HTTPS 的 Streamable HTTP 端点**。项目已经提供同一套工具的第二传输入口：
+
+```powershell
+.\.venv\Scripts\python.exe -m news_mcp.http_server --host 127.0.0.1 --port 8765 --path /mcp
+```
+
+本地健康检查：
+
+```powershell
+curl.exe http://127.0.0.1:8765/healthz
+```
+
+公网测试可以用 Cloudflare Tunnel：
+
+```powershell
+cloudflared tunnel --url http://127.0.0.1:8765
+```
+
+然后把 `https://随机域名/mcp` 填到 ChatGPT Developer Mode 的 App 或豆包插件的 `mcp.json`。
+
+- ChatGPT 配置：[integrations/chatgpt/README.md](integrations/chatgpt/README.md)
+- 豆包配置：[integrations/doubao/README.md](integrations/doubao/README.md)
+- 完整说明、鉴权和部署限制：[docs/REMOTE_MCP.md](docs/REMOTE_MCP.md)
+
+注意：ChatGPT 自定义 MCP 当前主要支持 OAuth 或无鉴权，不能假设它会发送自定义 Bearer Header；豆包支持在 `mcp.json` 的 `headers` 中放 Bearer Token。公网无鉴权 URL 存在滥用风险，正式部署应使用网关、OAuth 或访问白名单。
+
 ## MCP Tools
 
 | 工具 | 主要输入 | 行为 |
@@ -186,7 +215,11 @@ stdout 只承载 MCP JSON-RPC；日志写入 stderr，不会污染协议。
 
 ```text
 mcp-config.example.json  MCP 客户端配置示例
-run_mcp.bat              Windows 启动脚本
+run_mcp.bat              Windows stdio 启动脚本
+run_http.bat             Windows 远程 HTTP 启动脚本
+docs/REMOTE_MCP.md       ChatGPT / 豆包远程接入说明
+integrations/chatgpt/    ChatGPT 自定义 App/Connector 配置说明
+integrations/doubao/     豆包插件 plugin.json + mcp.json
 config/                  settings.yaml + sites/xinhua.yaml + sites/chinanews.yaml
 news_mcp/                核心：config/fetch/parsers/discovery/adapters/storage/service/server
 tests/                   pytest 单元与真实网络测试

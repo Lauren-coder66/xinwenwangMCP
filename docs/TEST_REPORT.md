@@ -37,17 +37,17 @@
 
 ```text
 ...............................................                          [100%]
-47 passed in 49.45s
+50 passed in 42.28s
 ```
 
-- 单元测试（不联网）：43 passed
+- 单元测试（不联网）：46 passed（含 HTTP 传输/鉴权测试）
 - 真实网络集成测试：4 passed
   - 新华网真实采集 + 重复采集去重
   - 新华网 + 中国新闻网跨站检索
   - 中国新闻网真实验证
   - 新华网 RSS 可访问但过期
 
-覆盖点：URL 规范化/去重、域名白名单、私网/回环拒绝、重定向目标校验、robots 失败关闭、超时、404、解析器、RSS 过期、Sitemap、HTML 同频道过滤、SQLite 去重/搜索/日期边界、配置故障隔离、MCP 初始化/工具发现/参数校验。
+覆盖点：URL 规范化/去重、域名白名单、私网/回环拒绝、重定向目标校验、robots 失败关闭、超时、404、解析器、RSS 过期、Sitemap、HTML 同频道过滤、SQLite 去重/搜索/日期边界、配置故障隔离、MCP 初始化/工具发现/参数校验、HTTP `/healthz`、Bearer 401。
 
 ## 3. MCP Inspector
 
@@ -69,8 +69,21 @@
 | `inspect_site` 中国新闻网滚动页 | `status=candidate`，`validated=false`，生成候选 YAML 与真实样本 |
 | 非法 `limit=0` | MCP 返回 `isError=true`，Inspector exit 5；参数校验生效 |
 
+### 远程 HTTP 传输
+
+- 本地 `python -m news_mcp.http_server` 启动成功；
+- `GET /healthz` 返回 200；
+- Inspector `--transport http --server-url http://127.0.0.1:8765/mcp --method tools/list` 返回 8 个工具；
+- HTTP `tools/call` 调用 `get_latest_news` 成功；
+- Bearer Token：无 token 返回 401，带 `Authorization: Bearer ...` 可完成 `tools/list`；
+- 证据：`evidence/inspector/http_tools_list.json`、`evidence/inspector/http_call_latest.json`、`evidence/inspector/http_auth.json`、`evidence/inspector/http_tools_list_auth.json`。
+
+> 未验证真实 ChatGPT/豆包账号中的 App 扫描与对话调用；这需要公网 HTTPS、平台账号和平台审核，本地无法代替。
+
 原始文件：
 
+- `evidence/inspector/http_tools_list.json`
+- `evidence/inspector/http_call_latest.json`
 - `evidence/inspector/tools_list.json`
 - `evidence/inspector/list_sites.json`
 - `evidence/inspector/list_channels.json`

@@ -1,0 +1,6 @@
+{
+  "healthz": 200,
+  "mcp_without_token": 401,
+  "mcp_with_token": "tools/list returned 8 tools",
+  "authorized_evidence": "evidence/inspector/http_tools_list_auth.json"
+}

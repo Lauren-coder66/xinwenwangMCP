@@ -1,6 +1,6 @@
 {
   "mode": "app-offline",
-  "tested_at": "2026-11-17T14:04:06+00:00",
+  "tested_at": "2026-11-17T15:16:08+00:00",
   "env": {
     "NEWS_MCP_OFFLINE": "1",
     "HTTPS_PROXY": null

@@ -11,14 +11,18 @@
 | `acceptance_audit.json` | 10 条人工可核对样本（标题/日期/URL/正文/导航清洗）、实时新 URL、404、去重 |
 | `news_samples.csv` | 32 条入库文章的完整 CSV（含正文与原文 URL，UTF-8 BOM） |
 | `news_samples.json` | 同上，JSON |
-| `pytest_full.txt` | 47 个 pytest 的原始输出 |
+| `pytest_full.txt` | 50 个 pytest 的原始输出 |
 | `mcp_client_smoke.json` | 独立官方 SDK 客户端 initialize/tools/list/tools/call |
 | `ai_client_call.md` | DeepSeek Harness 真实 AI 客户端工具调用日志与最终回答 |
 | `dsh_bundle_install.json` | DeepSeek Harness 配置型 bundle 安装结果（`application=applied`）与暴露的工具名 |
 | `empty_result.json` | 不存在关键词返回空列表、不是替代新闻 |
 | `offline_app-offline.json` | `NEWS_MCP_OFFLINE=1` 断网路径 |
 | `offline_proxy-refused.json` | 代理指向关闭端口造成的真实连接失败 |
-| `inspector/tools_list.json` | Inspector `tools/list`（`--strict` 通过） |
+| `inspector/tools_list.json` | Inspector stdio `tools/list`（`--strict` 通过） |
+| `inspector/http_tools_list.json` | Inspector HTTP `tools/list`（Streamable HTTP） |
+| `inspector/http_call_latest.json` | Inspector HTTP `tools/call` 真实新闻 |
+| `inspector/http_auth.json` | HTTP 健康检查 200、无 token 401 |
+| `inspector/http_tools_list_auth.json` | 带 Bearer token 的 HTTP `tools/list` |
 | `inspector/list_sites.json` | Inspector `list_sites` |
 | `inspector/list_channels.json` | Inspector `list_channels` |
 | `inspector/latest_xinhua.json` | Inspector 新华网最新新闻 |

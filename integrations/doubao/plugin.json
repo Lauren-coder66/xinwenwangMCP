@@ -1,0 +1,29 @@
+{
+  "name": "news-mcp",
+  "version": "1.0.0",
+  "description": "查询新华网与中国新闻网的真实新闻，保留原文链接、发布时间和抓取状态。",
+  "extensions": {
+    "com.doubao": {
+      "displayName": {
+        "zh": "新华网新闻",
+        "en": "News MCP"
+      },
+      "displayDescription": {
+        "zh": "通过真实采集的多站点新闻服务查询最新新闻、按日期或关键词检索，并读取原文正文。",
+        "en": "Query verified news from Xinhua and China News Service with source URLs."
+      },
+      "mcpServers": {
+        "news": {
+          "displayName": {
+            "zh": "新闻数据服务",
+            "en": "News data"
+          },
+          "displayDescription": {
+            "zh": "查询本地已采集新闻、刷新栏目和读取文章正文。",
+            "en": "Search collected news, refresh channels, and read article bodies."
+          }
+        }
+      }
+    }
+  }
+}
